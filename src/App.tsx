@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import About from './Pages/About';
+import Main from './Pages/Main';
+import { navigationLinks } from './data/links.js';
+import Header from './Components/Header';
+import { Heading } from './Components';
+import styled from 'styled-components';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainWrapper>
+      {/* <Heading type="h4"/> */}
+      <Router>
+        <Header></Header>
+        <Switch>
+          {navigationLinks.map((link, i) => {
+            return (
+              <Route
+                path={link.link}
+                component={link.component}
+                key={link.id}
+                exact={link.exact}></Route>
+            );
+          })}
+          {/* <Route path="/" component = {Main} exact></Route>
+            <Route path="/about" component = {About}></Route> */}
+        </Switch>
+      </Router>
+    </MainWrapper>
   );
-}
+};
 
 export default App;
+
+
+const MainWrapper = styled.div `
+display: flex;
+flex-direction: column;
+width: 100%;
+/* justify-content: center; */
+align-items: center;
+min-height: 100vh;
+background-color: #8db0cf;
+`
