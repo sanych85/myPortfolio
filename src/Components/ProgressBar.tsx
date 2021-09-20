@@ -24,18 +24,19 @@ const Wrapper = styled.div`
   display: flex;
   width: 90%;
   height: 15px;
-  border-radius: 10px;
+ 
 `;
 
 const StyledStar = styled.div`
   height: 15px;
   width: 10%;
   border: 1px solid #0000002d;
+  border-radius: 10px;
   &:not(:last-child) {
     border-right: 0px solid black;
   }
 
   &.painted {
-    background-color: yellow;
+    background-color: #cccc31b2;
   }
 `;

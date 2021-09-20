@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 interface HeadingProps {
   type: string;
@@ -34,33 +34,46 @@ const Heading: React.FC<HeadingProps> = ({ type, children, ...rest }) => {
 
 export default Heading;
 
-// const base = css` 
-//   text-transform: uppercase;
- 
-//   padding-left: 1rem;
-//   padding-right: 1rem;
-// `;
-
-const CommonHeadingStyles = styled.h1<StyledHeading>`
+const base = css` 
   text-transform: uppercase;
+ 
   padding-left: 1rem;
   padding-right: 1rem;
-  color: ${({ color }) => color || 'green'};
-  font-family: ${({fontFamily})=>fontFamily || ""};
-  text-align: center;
-
 `;
 
-const H1 = styled(CommonHeadingStyles)`
+// const CommonHeadingStyles = styled.h1<StyledHeading>`
+//   text-transform: uppercase;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   ${base}
+//   color: ${({ color }) => color || 'green'};
+//   font-family: ${({fontFamily})=>fontFamily || ""};
+//   text-align: center;
+
+// `;
+
+const H1 = styled.h1<StyledHeading>`
+  ${base}
+  color: ${({ color }) => color || 'green'};
+  font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 2rem;
 `;
 
-const H2 = styled(CommonHeadingStyles)`
+const H2 = styled.h2<StyledHeading>`
+  ${base}
+  color: ${({ color }) => color || 'green'};
+  font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.7rem;
 `;
-const H3 = styled(CommonHeadingStyles)`
+const H3 = styled.h3<StyledHeading>`
+  ${base}
+  color: ${({ color }) => color || 'green'};
+  font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.4rem;
 `;
-const H4 = styled(CommonHeadingStyles)`
+const H4 = styled.h4<StyledHeading>`
+  ${base}
+  color: ${({ color }) => color || 'green'};
+  font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.2rem;
 `;

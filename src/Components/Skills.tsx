@@ -1,7 +1,7 @@
 import React from 'react'
 import { MainSectionWrapper } from './commonComponents'
 import styled from 'styled-components';
-import SkillIcons from './SkillIcons';
+import SkillIcons from './SkilllItems';
 import { Heading } from '.';
 
 
@@ -10,7 +10,7 @@ const Skills = () => {
     return (
 
         <Wrapper as = "section" className = "skills section wrapper">
-            <Heading type = "h1">Skills</Heading>
+            <Heading type = "h1" fontFamily="Titan One">Skills</Heading>
             <SkillIcons/>
         </Wrapper>
     )

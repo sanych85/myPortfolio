@@ -9,10 +9,6 @@ interface SkillInterface {
   color?: string;
 }
 
-
-
-
-
 const SkillIcons = () => {
   return (
     <StyledUl>
