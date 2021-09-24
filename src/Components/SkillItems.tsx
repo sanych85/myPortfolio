@@ -9,7 +9,7 @@ interface SkillInterface {
   color?: string;
 }
 
-const SkillIcons = () => {
+const SkillItems = () => {
   return (
     <StyledUl>
       {skills.map((skill, i) => {
@@ -26,7 +26,7 @@ const SkillIcons = () => {
   );
 };
 
-export default SkillIcons;
+export default SkillItems;
 
 const StyledUl = styled.ul`
   display: flex;

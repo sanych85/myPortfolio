@@ -4,37 +4,49 @@ import { StyledButton, Heading } from '.';
 import { VerticalWrapper } from './commonComponents';
 import { AiFillGithub } from 'react-icons/ai';
 import { CgWebsite } from 'react-icons/cg';
+import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
+import RepoAndSite from './RepoAndSite';
 
-interface Projects {
+export interface ProjectCard {
   name: string;
   id: number;
   repo: string | undefined;
   live: string | undefined;
-  mainImg: any;
+  mainImg: string;
+  detailedInfo: {
+    imgs: Array<string>;
+    description: string;
+    technologies: Array<string>;
+    releasedYear: number
+  };
 }
 
-const OneProject: React.FC<Projects> = ({ name, repo, live, mainImg }) => {
+const OneProject: React.FC<ProjectCard> = ({
+  name,
+  repo,
+  live,
+  mainImg,
+  id,
+  detailedInfo,
+}) => {
+  console.log(id);
   return (
     <StyledLi>
       <StyledHeading type="h4" fontFamily="Love Ya Like A Sister ">
-        {name}{' '}
+        {name}
       </StyledHeading>
 
       <hr />
-      <Button className="more_info">More</Button>
+
+      <StyledLink to={`${id}`} className="more_info ">
+        More
+      </StyledLink>
+
       <div className="imgWrapper">
         <img src={mainImg} alt={name} />
       </div>
-      <Icons>
-        <a href={repo}>
-          Repo
-          <AiFillGithub />
-        </a>
-        <a href={live}>
-          Site
-          <CgWebsite />
-        </a>
-      </Icons>
+      <RepoAndSite repo={repo} live={live} />
     </StyledLi>
   );
 };
@@ -57,16 +69,17 @@ const StyledLi = styled.li`
   }
   hr {
     width: 1px;
-    opacity:0;
+    opacity: 0;
 
     transition: all 0.4s ease;
   }
   &:hover hr {
     width: 50px;
     color: #1613cc;
-    opacity:1
+    opacity: 1;
   }
   &:hover .more_info {
+    opacity: 1;
     display: block;
   }
 
@@ -85,7 +98,6 @@ const StyledLi = styled.li`
       height: 238px;
     }
     &:hover:before {
-
       position: absolute;
       top: 0;
       left: 0;
@@ -130,7 +142,13 @@ const Icons = styled.div`
   }
 `;
 
-const Button = styled(StyledButton)`
+const StyledLink = styled(Link)`
+  border-radius: 5px;
+  padding: 5px 8px;
+  display: inline-flex;
+  outline: none;
+  border-style: none;
+  text-decoration: none;
   color: #d4cccc;
   background-color: #102a3a;
   position: absolute;
@@ -138,8 +156,10 @@ const Button = styled(StyledButton)`
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.1rem;
-  display: none;
+
   z-index: 999;
+  transition: all 0.6s ease;
+  opacity: 0;
   &:hover {
     cursor: pointer;
   }
@@ -151,6 +171,7 @@ const Button = styled(StyledButton)`
     background-color: #889feb8b;
     width: 100%;
     height: 100%;
+
     transition: all 0.6s ease;
   }
 `;

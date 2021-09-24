@@ -28,7 +28,7 @@ const renderHead = (type: string, children: React.ReactNode, rest: any) => {
 };
 
 const Heading: React.FC<HeadingProps> = ({ type, children, ...rest }) => {
-  console.log(children);
+
   return <div>{renderHead(type, children, rest)}</div>;
 };
 
@@ -36,7 +36,7 @@ export default Heading;
 
 const base = css` 
   text-transform: uppercase;
- 
+  text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
 `;

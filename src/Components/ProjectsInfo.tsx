@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import { Heading } from '.';
 import { MainSectionWrapper } from './commonComponents';
 import { projects } from '../data/projects.js';
-import OneProject from './OneProject';
+import OneProject from './OneProjectCard';
+
+
+
 
 const ProjectsInfo = () => {
+
   return (
     <MainWrapper>
         <Wrapper as="section">

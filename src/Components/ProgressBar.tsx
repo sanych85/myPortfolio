@@ -6,8 +6,8 @@ interface Progress {
 }
 
 const createDivElem = (stars: string) => {
-  return Array.from(Array(10).keys()).map((elem: any, i) => {
-    console.log(stars);
+  return Array.from(Array(10).keys()).map((elem, i) => {
+
     return +stars > i ? (
       <StyledStar className="painted" key={i}></StyledStar>
     ) : (

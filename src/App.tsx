@@ -2,31 +2,44 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import About from './Pages/About';
 import Main from './Pages/Main';
-import { navigationLinks } from './data/links.js';
+import { routingLinks } from './data/links.js';
 import Header from './Components/Header';
 import { Heading } from './Components';
 import styled from 'styled-components';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import { SingleProjectPage } from './Pages';
+
+
+
+
 const App = () => {
   return (
-    <MainWrapper>
-      {/* <Heading type="h4"/> */}
-      <Router>
-        <Header></Header>
-        <Switch>
-          {navigationLinks.map((link, i) => {
-            return (
-              <Route
-                path={link.link}
-                component={link.component}
-                key={link.id}
-                exact={link.exact}></Route>
-            );
-          })}
-          {/* <Route path="/" component = {Main} exact></Route>
-            <Route path="/about" component = {About}></Route> */}
-        </Switch>
-      </Router>
-    </MainWrapper>
+    <Provider store = {store}>
+      <MainWrapper>
+        {/* <Heading type="h4"/> */}
+        <Router>
+          <Header></Header>
+          <Switch>
+            {routingLinks.map((link, i) => {
+              return (
+             
+               
+                <Route
+                  path={link.link}
+                  component={link.component}
+                  key={link.id}
+                  exact={link.exact}></Route >
+                  
+              
+              );
+            })}
+            {/* <Route path="/" component = {Main} exact></Route>
+              <Route path="/about" component = {About}></Route> */}
+          </Switch>
+        </Router>
+      </MainWrapper>
+    </Provider>
   );
 };
 
