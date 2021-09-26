@@ -31,7 +31,7 @@ const SingleProjectPage = () => {
   //   const [style, setStyle] = useState('0px');
   console.log(currentIndex, 'currentIndex');
   const goBack = () => {
-    history.goBack();
+    history.push("./");
   };
 
   const handleClick = (type: string): void => {
@@ -49,14 +49,6 @@ const SingleProjectPage = () => {
         : setCurrentIndex((prev) => prev + 1);
     }
   };
-
-    // useEffect(() => {
-    //   const interval = setInterval(() => handleClick('right'), 4000);
-
-    //   return () => {
-    //     clearInterval(interval);
-    //   };
-    // }, [currentIndex]);
   return (
     <Main>
       <Section>

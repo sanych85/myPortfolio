@@ -1,31 +1,39 @@
 import { ProjectsPage, Main, About, SingleProjectPage } from '../Pages';
-
+import { AiFillFacebook, AiFillSkype, AiFillGithub } from 'react-icons/ai';
 export const socialLinks = [
   {
     id: 1,
-    name: 'vk',
-    link: '',
+    name: 'facebook',
+    link: 'https://www.facebook.com/aleks.shatoh',
+    component: <AiFillFacebook/>,
+    color: "#4867aa"
   },
   {
     id: 2,
-    name: 'facebook',
-    link: '',
+    name: 'github',
+    link: 'https://github.com/sanych85',
+    component: <AiFillGithub/>,
+    color: "black"
   },
   {
     id: 3,
-    name: 'github',
+    name: 'Skype',
     link: '',
+    component: <AiFillSkype/>,
+    color: '#0291d5'
+    // colorHover: ""
   },
+
 ];
 
 export const routingLinks = [
-    {
-        id: 1,
-        name: 'main',
-        link: '/',
-        component: Main,
-        exact: true,
-      },
+  {
+    id: 1,
+    name: 'main',
+    link: '/',
+    component: Main,
+    exact: true,
+  },
   {
     id: 2,
     name: 'about',
@@ -47,7 +55,6 @@ export const routingLinks = [
     component: SingleProjectPage,
     exact: true,
   },
-
 ];
 
 export const navigationLinks = [
@@ -55,20 +62,19 @@ export const navigationLinks = [
     id: 1,
     name: 'main',
     link: '/',
-  
+
     exact: true,
   },
   {
     id: 2,
     name: 'about',
     link: '/about',
-   
+
     exact: false,
   },
   {
     id: 3,
     name: 'projects',
     link: '/projects',
-  
   },
 ];

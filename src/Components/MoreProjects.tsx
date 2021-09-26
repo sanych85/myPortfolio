@@ -20,7 +20,7 @@ const MoreProjects: React.FC<MoreProjectsProps> = ({ id }) => {
               key={proj.id}
               src={proj.mainImg}
               alt={proj.name}
-              id={id}></ImgItem>
+              id={proj.id} ></ImgItem>
           ))}
       </ProjectWrapper>
     </Wrapper>

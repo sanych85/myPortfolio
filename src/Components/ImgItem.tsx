@@ -8,8 +8,10 @@ interface ImgItemProps {
 }
 
 const ImgItem: React.FC<ImgItemProps> = ({ src, alt, id }) => {
+  console.log("id in img item", id)
+  const href = `./${id}`
   return (
-    <a href="./">
+    <a href={href}>
       <Figure>
         <Img src={src} alt={alt} />
       </Figure>
@@ -26,5 +28,11 @@ const Figure = styled.figure`
 const Img = styled.img`
   width: 107px;
   height: 67px;
-  
+  transition: all 0.9s ease;
+  &:hover {
+ 
+    box-sizing: border-box;
+ 
+    transform: translateY(10px)
+  }
 `;

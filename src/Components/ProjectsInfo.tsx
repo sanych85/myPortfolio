@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Heading } from '.';
 import { MainSectionWrapper } from './commonComponents';
 import { projects } from '../data/projects.js';
-import OneProject from './OneProjectCard';
+import OneProjectCard from './OneProjectCard';
 
 
 
@@ -16,7 +16,7 @@ const ProjectsInfo = () => {
           <Heading type="h1" fontFamily="Titan One">Projects</Heading>
           <InnerWrapper as = "ul">
             {projects.map((project) => {
-              return <OneProject key={project.id} {...project} />;
+              return <OneProjectCard key={project.id} {...project} />;
             })}
           </InnerWrapper>
         </Wrapper>

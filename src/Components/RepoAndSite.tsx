@@ -4,24 +4,25 @@ import { AiFillGithub } from 'react-icons/ai';
 import { CgWebsite } from 'react-icons/cg';
 
 interface RepoAndSyte {
-    repo:string|undefined,
-    live:string| undefined
+  repo: string | undefined;
+  live: string | undefined;
 }
 
-
-const RepoAndSite:React.FC<RepoAndSyte> = ({repo, live}) => {
+const RepoAndSite: React.FC<RepoAndSyte> = ({ repo, live }) => {
   return (
     <Icons>
- 
+      {repo && (
         <a href={repo}>
           Repo
           <AiFillGithub />
         </a>
+      )}
+      {live && (
         <a href={live}>
           Site
           <CgWebsite />
         </a>
-     
+      )}
     </Icons>
   );
 };
@@ -36,7 +37,7 @@ const Icons = styled.div`
   a {
     background-color: antiquewhite;
     padding: 3px 6px;
-    margin: 1rem;
+    margin: 0.2rem 1rem;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.6s ease;

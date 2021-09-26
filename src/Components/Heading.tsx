@@ -54,26 +54,26 @@ const base = css`
 
 const H1 = styled.h1<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'green'};
+  color: ${({ color }) => color || 'violet'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 2rem;
 `;
 
 const H2 = styled.h2<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'green'};
+  color: ${({ color }) => color || 'violet'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.7rem;
 `;
 const H3 = styled.h3<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'green'};
+  color: ${({ color }) => color || 'violet'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.4rem;
 `;
 const H4 = styled.h4<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'green'};
+  color: ${({ color }) => color || 'violet'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.2rem;
 `;

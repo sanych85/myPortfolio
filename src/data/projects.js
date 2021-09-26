@@ -70,20 +70,7 @@ export const projects = [
       releasedYear: 2021
     },
   },
-  {
-    id: 5,
-    name: 'E-commerce shop',
-    repo: 'https://github.com/sanych85/e-commerce-appartment',
-    live: 'https://e-commerce-enterior.netlify.app/',
-    mainImg: eCommerceIinteriorImg,
-    detailedInfo: {
-      imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sunt, similique iusto voluptatum dolorem repudiandae sed beatae sit aperiam totam praesentium quaerat. Unde vel temporibus, soluta necessitatibus cum consectetur iste!',
-      technologies: ['HTML', 'CSS', 'React', 'styled components'],
-      releasedYear: 2021
-    },
-  },
+
   {
     id: 6,
     name: 'Coctail',
@@ -111,7 +98,7 @@ export const projects = [
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatem doloribus maxime ullam. Fugiat, reiciendis exercitationem illo quod nobis, commodi dolorum ipsam molestiae eaque adipisci corporis est animi? Perspiciatis, expedita?',
       technologies: ['HTML', 'CSS', 'Sass', 'Wordpress', 'Webpack', 'JS'],
-      releasedYear: 2019
+      releasedYear: 2021
     },
   },
   {
@@ -127,6 +114,21 @@ export const projects = [
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ad facere aspernatur ipsa ab, est similique id totam quis incidunt voluptatum laudantium soluta iusto molestias eligendi nostrum veritatis. Aperiam, temporibus!',
       technologies: ['HTML', 'CSS', 'Sass', 'Wordpress', 'Webpack', 'JS'],
       releasedYear: 2019
+    },
+  },
+
+  {
+    id: 5,
+    name: 'E-commerce shop',
+    repo: 'https://github.com/sanych85/e-commerce-appartment',
+    live: 'https://e-commerce-enterior.netlify.app/',
+    mainImg: eCommerceIinteriorImg,
+    detailedInfo: {
+      imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sunt, similique iusto voluptatum dolorem repudiandae sed beatae sit aperiam totam praesentium quaerat. Unde vel temporibus, soluta necessitatibus cum consectetur iste!',
+      technologies: ['HTML', 'CSS', 'React', 'styled components'],
+      releasedYear: 2021
     },
   },
 ];

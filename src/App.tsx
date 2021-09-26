@@ -10,12 +10,9 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { SingleProjectPage } from './Pages';
 
-
-
-
 const App = () => {
   return (
-    <Provider store = {store}>
+    <Provider store={store}>
       <MainWrapper>
         {/* <Heading type="h4"/> */}
         <Router>
@@ -23,15 +20,11 @@ const App = () => {
           <Switch>
             {routingLinks.map((link, i) => {
               return (
-             
-               
                 <Route
                   path={link.link}
                   component={link.component}
                   key={link.id}
-                  exact={link.exact}></Route >
-                  
-              
+                  exact={link.exact}></Route>
               );
             })}
             {/* <Route path="/" component = {Main} exact></Route>
@@ -45,13 +38,12 @@ const App = () => {
 
 export default App;
 
-
-const MainWrapper = styled.div `
-display: flex;
-flex-direction: column;
-width: 100%;
-/* justify-content: center; */
-align-items: center;
-min-height: 100vh;
-background-color: #8db0cf;
-`
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* justify-content: center; */
+  align-items: center;
+  min-height: 100vh;
+  background-color: #8db0cf;
+`;

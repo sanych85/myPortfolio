@@ -10,8 +10,10 @@ const Skills = () => {
     return (
 
         <Wrapper as = "section" className = "skills section wrapper">
-            <Heading type = "h1" fontFamily="Titan One">Skills</Heading>
-            <SkillItems />
+            <InnerWrapper>
+                <Heading type = "h1" fontFamily="Titan One">Skills</Heading>
+                <SkillItems />
+            </InnerWrapper>
         </Wrapper>
     )
 }
@@ -21,10 +23,18 @@ export default Skills
 
 const Wrapper = styled(MainSectionWrapper)`
 display: flex;
-justify-content: flex-start;
-flex-direction: column;
-background-color: aqua;
+justify-content: center;
+width: 100%;
+background-color: #98ccccb5;
 min-height: 0px;
+`
+
+const InnerWrapper = styled.div `
+width: 70%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
 `
 
 
