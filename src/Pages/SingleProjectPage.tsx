@@ -101,6 +101,7 @@ const Main = styled.main`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom:3rem;
 `;
 
 const Section = styled.section`
@@ -112,7 +113,8 @@ const Section = styled.section`
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
-background-color: #f5f5dc47;
+/* background-color: #f5f5dc47; */
+background-color: #ffffff85;
 border-radius: 10px;
 `;
 

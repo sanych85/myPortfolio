@@ -6,22 +6,24 @@ export const socialLinks = [
     name: 'facebook',
     link: 'https://www.facebook.com/aleks.shatoh',
     component: <AiFillFacebook/>,
-    color: "#4867aa"
+    color: "#4867aa",
+    colorHover: "#344b7d"
   },
   {
     id: 2,
     name: 'github',
     link: 'https://github.com/sanych85',
     component: <AiFillGithub/>,
-    color: "black"
+    color: "black",
+    colorHover: "#5d4545"
   },
   {
     id: 3,
     name: 'Skype',
     link: '',
     component: <AiFillSkype/>,
-    color: '#0291d5'
-    // colorHover: ""
+    color: '#0291d5',
+    colorHover: "#066d9e"
   },
 
 ];

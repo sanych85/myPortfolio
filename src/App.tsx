@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { SingleProjectPage } from './Pages';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
             {/* <Route path="/" component = {Main} exact></Route>
               <Route path="/about" component = {About}></Route> */}
           </Switch>
+          <Footer/>
         </Router>
       </MainWrapper>
     </Provider>
@@ -45,5 +47,5 @@ const MainWrapper = styled.div`
   /* justify-content: center; */
   align-items: center;
   min-height: 100vh;
-  background-color: #8db0cf;
+  background-color: #f4ece9;
 `;

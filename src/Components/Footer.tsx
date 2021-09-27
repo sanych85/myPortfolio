@@ -20,7 +20,7 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: teal;
+  background-color: #f4fffff2;
   height: 100px;
 `;
 

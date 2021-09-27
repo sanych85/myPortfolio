@@ -30,7 +30,7 @@ export default ProjectsInfo;
 const Wrapper = styled(MainSectionWrapper)`
 flex-direction: column;
 width: 100%;
-background-color: #6bada7;
+background-color: f4ece9;
 /* width: 90%; */
 `;
 

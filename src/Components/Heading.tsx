@@ -54,7 +54,7 @@ const base = css`
 
 const H1 = styled.h1<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'violet'};
+  color: ${({ color }) => color || '#754040'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 2rem;
 `;

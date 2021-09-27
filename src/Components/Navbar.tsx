@@ -1,6 +1,7 @@
 import { navigationLinks } from '../data/links';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { NavLink } from 'react-router-dom';
+
 const Navbar = () => {
   return (
     <StyledNavbar>
@@ -21,7 +22,26 @@ const Navbar = () => {
 
 export default Navbar;
 
-const StyledNavbar = styled.nav``;
+const navbarAnimation = keyframes `
+0% {
+  transform: translateX(200px);
+  opacity:0;
+}
+
+100% {
+  transform: translateX(0px);
+  opacity:1;
+}
+`
+
+
+
+const StyledNavbar = styled.nav`
+  animation-name: ${navbarAnimation};
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+  animation-fill-mode: backwards;
+`;
 
 const StyledUl = styled.ul`
   display: flex;
@@ -34,7 +54,7 @@ const StyledLi = styled.li`
   text-transform: uppercase;
   margin: 1rem;
   .active {
-    color: #f1f1f1;
+    color: #d16464;
     text-decoration: underline;
   }
 `;

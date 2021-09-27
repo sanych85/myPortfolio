@@ -25,7 +25,7 @@ const Wrapper = styled(MainSectionWrapper)`
 display: flex;
 justify-content: center;
 width: 100%;
-background-color: #98ccccb5;
+background-color: #f4fffff2;
 min-height: 0px;
 `
 
