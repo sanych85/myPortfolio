@@ -29,7 +29,7 @@ const renderHead = (type: string, children: React.ReactNode, rest: any) => {
 
 const Heading: React.FC<HeadingProps> = ({ type, children, ...rest }) => {
 
-  return <div>{renderHead(type, children, rest)}</div>;
+  return <>{renderHead(type, children, rest)}</>;
 };
 
 export default Heading;
@@ -39,6 +39,7 @@ const base = css`
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
+
 `;
 
 // const CommonHeadingStyles = styled.h1<StyledHeading>`
@@ -61,19 +62,19 @@ const H1 = styled.h1<StyledHeading>`
 
 const H2 = styled.h2<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'violet'};
+  color: ${({ color }) => color || '#754040'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.7rem;
 `;
 const H3 = styled.h3<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'violet'};
+  color: ${({ color }) => color || '#754040'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.4rem;
 `;
 const H4 = styled.h4<StyledHeading>`
   ${base}
-  color: ${({ color }) => color || 'violet'};
+  color: ${({ color }) => color || '#754040'};
   font-family: ${({fontFamily})=>fontFamily || ""};
   font-size: 1.2rem;
 `;

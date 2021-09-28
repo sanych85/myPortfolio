@@ -13,10 +13,10 @@ const Intro = () => {
       </LeftSection>
 
       <About>
-        <Heading type="h2" color="#353454" fontFamily="Titan One">
+        <Heading type="h2" color="#353454" fontFamily="Roboto">
           Hello, I'm
         </Heading>
-        <Heading type="h1" color="#574a70" fontFamily="Love Ya Like A Sister ">
+        <Heading type="h2" color="#574a70" fontFamily="Love Ya Like A Sister ">
           Alex Shatokhin
         </Heading>
         <p className="about-information">

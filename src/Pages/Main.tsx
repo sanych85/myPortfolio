@@ -1,7 +1,7 @@
 
 import Intro from '../Components/Intro';
 import styled from 'styled-components';
-import { Skills } from '../Components';
+import { Education, Skills } from '../Components';
 import ProjectsInfo from '../Components/ProjectsInfo';
 
 
@@ -10,8 +10,10 @@ const Main = () => {
   return (
     <StyledMain>
       <Intro />
+      <Education/>
       <Skills />
       <ProjectsInfo/>
+   
   
     </StyledMain>
   );

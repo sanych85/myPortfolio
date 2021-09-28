@@ -14,6 +14,8 @@ import SingleSocialLink from './SingleSocialLink';
 import SocialLinks from './SocialLinks';
 import CopyRight from './CopyRight';
 import Navbar  from "./Navbar"
+import Education from './Educations';
+
 
 
 
@@ -33,5 +35,6 @@ export {
   SingleSocialLink,
   SocialLinks,
   CopyRight,
-  Navbar
+  Navbar,
+  Education
 };

@@ -80,3 +80,21 @@ export const navigationLinks = [
     link: '/projects',
   },
 ];
+
+
+export const eductaionLink = [
+  {
+    id:1,
+    univercityName: "Moscow State Univercity STANKIN",
+    degree: "bachelor",
+    year: "2002-2006",
+    speciality: "mechanical engineering technology"
+  },
+  {
+    id:2,
+    univercityName: "Moscow Finance and Law University",
+    degree: "specialist",
+    year: "2006-2009",
+    speciality: "finance and credit"
+  }
+]

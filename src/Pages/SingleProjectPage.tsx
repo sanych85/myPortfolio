@@ -52,7 +52,7 @@ const SingleProjectPage = () => {
   return (
     <Main>
       <Section>
-        <Heading type="h1" fontFamily="Love Ya Like A Sister ">
+        <Heading type="h2" fontFamily="Love Ya Like A Sister ">
           {name}
         </Heading>
         <Techologies>

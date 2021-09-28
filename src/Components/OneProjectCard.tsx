@@ -38,7 +38,7 @@ const OneProject: React.FC<ProjectCard> = ({
           More
         </StyledLink>
         <img src={mainImg} alt={name} />
-        <StyledHeading type="h4" fontFamily="Love Ya Like A Sister ">
+        <StyledHeading type="h4" fontFamily="Love Ya Like A Sister " color = "violet">
           {name}
         </StyledHeading>
       </div>

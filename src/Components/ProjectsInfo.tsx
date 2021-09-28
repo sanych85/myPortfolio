@@ -11,16 +11,16 @@ import OneProjectCard from './OneProjectCard';
 const ProjectsInfo = () => {
 
   return (
-    <MainWrapper>
+
         <Wrapper as="section">
-          <Heading type="h1" fontFamily="Titan One">Projects</Heading>
+          <Heading type="h3" fontFamily="Roboto">Projects</Heading>
           <InnerWrapper as = "ul">
             {projects.map((project) => {
               return <OneProjectCard key={project.id} {...project} />;
             })}
           </InnerWrapper>
-        </Wrapper>
-    </MainWrapper>
+        </Wrapper> 
+    
 
   );
 };

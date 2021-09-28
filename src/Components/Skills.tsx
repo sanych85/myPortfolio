@@ -11,7 +11,7 @@ const Skills = () => {
 
         <Wrapper as = "section" className = "skills section wrapper">
             <InnerWrapper>
-                <Heading type = "h1" fontFamily="Titan One">Skills</Heading>
+                <Heading type = "h3" fontFamily="Roboto">Skills</Heading>
                 <SkillItems />
             </InnerWrapper>
         </Wrapper>
