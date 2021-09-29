@@ -26,8 +26,10 @@ const Educations = () => {
 export default Educations;
 
 const Wrapper = styled.section`
+display: flex;
+flex-direction: column;
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-color: #f8f8fc;
 `;
 
@@ -37,9 +39,9 @@ const InnerWrapper = styled.div`
     content: '';
     position: absolute;
     width: 0.5px;
-    top: -10%;
+    top: 5%;
     left: 50%;
-    height: 120%;
+    height: 90%;
     background-color: #81869b3e;
   }
 `;

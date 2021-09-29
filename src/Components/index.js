@@ -13,11 +13,11 @@ import ImgItem from './ImgItem';
 import SingleSocialLink from './SingleSocialLink';
 import SocialLinks from './SocialLinks';
 import CopyRight from './CopyRight';
-import Navbar  from "./Navbar"
+import Navbar from './Navbar';
 import Education from './Educations';
-
-
-
+import Career from './Career';
+import WhyYouShouldHire from './WhyYouShouldHire';
+import AdvantageItem from './AdvantageItem';
 
 export {
   Heading,
@@ -36,5 +36,8 @@ export {
   SocialLinks,
   CopyRight,
   Navbar,
-  Education
+  Education,
+  Career,
+  WhyYouShouldHire,
+  AdvantageItem,
 };

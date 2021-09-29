@@ -1,20 +1,18 @@
-
 import Intro from '../Components/Intro';
 import styled from 'styled-components';
-import { Education, Skills } from '../Components';
+import { Career, Education, Skills, WhyYouShouldHire } from '../Components';
 import ProjectsInfo from '../Components/ProjectsInfo';
-
-
 
 const Main = () => {
   return (
     <StyledMain>
       <Intro />
-      <Education/>
+      <Education />
+      <WhyYouShouldHire/>
+      <Career />
       <Skills />
-      <ProjectsInfo/>
-   
-  
+      <ProjectsInfo />
+ 
     </StyledMain>
   );
 };
