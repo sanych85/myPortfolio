@@ -9,36 +9,36 @@ export const advantages = [
         id: 1,
         name: "basement",
         svg: <VscLibrary/>,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempora, voluptatibus praesentium delectus porro nam ipsam assumenda mollitia esse explicabo?"
+        description: "Have the necessery knowledge for start as fron-end developer"
     },
     {
         id: 2,
-        name: "fast learning",
+        name: "passion for learning",
         svg: <FiFastForward/>,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium alias qui deserunt sequi, quibusdam quos ab accusamus molestiae sint?"
+        description: "Really like to get new knowledge and techologies and I do it very quicly "
     },
     {
         id: 3,
         name: "english level",
         svg: <GiGiftOfKnowledge/>,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium alias qui deserunt sequi, quibusdam quos ab accusamus molestiae sint?"
+        description: "My english level allow me 100% understanding all written and spoken english text"
     },
     {
         id: 4,
-        name: " Understanding Business process",
+        name: " understanding business process",
         svg: <FaBusinessTime/>,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium alias qui deserunt sequi, quibusdam quos ab accusamus molestiae sint?"
+        description: "Worked in all positions in business, from specialist to CEO "
     },
     {
         id: 5,
-        name: "New knowlrdge",
+        name: "good communication skills",
         svg: <GiGiftOfKnowledge/>,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium alias qui deserunt sequi, quibusdam quos ab accusamus molestiae sint?"
+        description: "I am polite and ready for constructive criticism and any discussion"
     },
     {
         id: 6,
         name: "team work",
         svg: <BsPeopleFill/>,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium alias qui deserunt sequi, quibusdam quos ab accusamus molestiae sint?"
+        description: "Extensive experience in team management both as a performer and as an organizer"
     },
 ]

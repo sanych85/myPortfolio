@@ -23,12 +23,13 @@ const Wrapper = styled.section`
   width: 100%;
   flex-direction: column;
   align-items: center;
+
 `;
 const InnerWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 
 `;

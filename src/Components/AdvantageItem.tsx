@@ -24,7 +24,8 @@ const Li = styled.li`
   display: flex;
   flex-direction: column;
   width: 30%;
-  gap: 1rem;
+  margin: 2rem 0.5rem;
+  /* border: 1px solid #000; */
 `;
 const SvgWrapper = styled.div`
 display: flex;
@@ -35,4 +36,7 @@ justify-content: center;
       
   }`;
 
-const Description = styled.p``;
+const Description = styled.p`
+padding-left:2.5rem;
+padding-right: 2.5rem;
+`;
