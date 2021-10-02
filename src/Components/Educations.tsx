@@ -35,6 +35,7 @@ flex-direction: column;
 
 const InnerWrapper = styled.div`
   position: relative;
+  margin:  2rem 0;
   &:before {
     content: '';
     position: absolute;

@@ -33,15 +33,15 @@ const OneProject: React.FC<ProjectCard> = ({
 
   return (
     <StyledLi>
-      <div className="imgWrapper">
+      <figure className="imgWrapper">
         <StyledLink to={`${id}`} className="more_info ">
           More
         </StyledLink>
         <img src={mainImg} alt={name} />
-        <StyledHeading type="h4" fontFamily="Love Ya Like A Sister " color = "violet">
+        <StyledCaption >
           {name}
-        </StyledHeading>
-      </div>
+        </StyledCaption>
+      </figure>
 
       <CardFooter>
         {/* <hr /> */}
@@ -87,7 +87,23 @@ const StyledLink = styled(Link)`
     transition: all 0.6s ease;
   }
 `;
-
+  const StyledCaption = styled.caption `
+    text-transform: uppercase;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.6s ease;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: #464040e6;
+  font-family: "Love Ya Like A Sister";
+  color: violet;
+  font-size: 1.2rem;
+  `
 const StyledHeading = styled(Heading)`
   transition: all 0.6s ease;
   margin-bottom: 0px;
@@ -122,7 +138,7 @@ const StyledLi = styled.li`
   align-items: center;
   position: relative;
   list-style: none;
-  padding: 0.6rem;
+  /* padding: 0.6rem; */
   border-radius: 8px;
   transition: all 0.6s ease;
   -webkit-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
@@ -157,11 +173,7 @@ const StyledLi = styled.li`
     );
     transform: translateX(-50%);
   }
-  &:hover div h4 {
-    box-sizing: border-box;
-    color: black;
-    /* border-bottom: 1px solid #000; */
-  }
+
   hr {
     width: 1px;
     opacity: 0;
@@ -176,6 +188,8 @@ const StyledLi = styled.li`
 
   .imgWrapper {
     position: relative;
+    margin: 1rem;
+    margin-bottom: 0.5rem;
     height: 238px;
 
     &:hover .more_info {

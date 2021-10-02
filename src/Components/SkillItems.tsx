@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact } from 'react-icons/fa';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { HorizontalWrapper } from './commonComponents';
 import { skills } from '../data/skills';
 import { ProgressBar } from '.';
@@ -28,6 +28,16 @@ const SkillItems = () => {
 
 export default SkillItems;
 
+
+const borderAnimation = keyframes`
+0% {
+  transform: rotate(0deg)
+}
+100% {
+  transform: rotate(360deg)
+}
+`  
+
 const StyledUl = styled.ul`
   display: flex;
   justify-content: center;
@@ -46,6 +56,7 @@ const StyledLi = styled.li<SkillInterface>`
   flex-direction: column;
   justify-content: center;
   width: 15%;
+  
   p {
     margin: 0rem;
     font-family: '';
@@ -65,10 +76,30 @@ const StyledLi = styled.li<SkillInterface>`
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    background-color: #8080804c;
+    background-color: #dddddd;
     border-radius: 5px;
     width: 100px;
     height: 100px;
+    border: 1px solid #000;
+    position: relative;
+    overflow : hidden;
+    &:hover:before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 140%;
+      background: linear-gradient(#00ccff, #d400d4);
+      animation: ${borderAnimation} 2s linear infinite;
+  
+    }
+    &:hover:after {
+      content: "";
+      position: absolute;
+      background-color: #dddddd;
+      inset: 4px;
+
+     
+    }
     /* height: 100px; */
     svg {
       display: block;
@@ -79,6 +110,8 @@ const StyledLi = styled.li<SkillInterface>`
       left: 50%;
       transform: translate(-50%, -50%);
       color: ${({ color }) => color || ''};
+      z-index: 999;
+     
     }
   }
 `;
