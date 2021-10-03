@@ -1,4 +1,4 @@
-import { ProjectsPage, Main, About, SingleProjectPage } from '../Pages';
+import { ProjectsPage, Main, About, SingleProjectPage ,NotFoundPage} from '../Pages';
 import { AiFillFacebook, AiFillSkype, AiFillGithub } from 'react-icons/ai';
 export const socialLinks = [
   {
@@ -41,21 +41,28 @@ export const routingLinks = [
     name: 'about',
     link: '/about',
     component: About,
-    exact: false,
+    exact: true,
   },
   {
     id: 3,
     name: 'projects',
     link: '/projects',
     component: ProjectsPage,
-    exact: false,
+    exact: true,
   },
   {
     id: 4,
     name: 'project',
-    link: '/:id',
+    link: '/projects/:id',
     component: SingleProjectPage,
     exact: true,
+  },
+  {
+    id: 5,
+    name: '404',
+    link: '*',
+    component: NotFoundPage,
+    exact: false,
   },
 ];
 

@@ -191,6 +191,7 @@ const StyledLi = styled.li`
     margin: 1rem;
     margin-bottom: 0.5rem;
     height: 238px;
+    transition: all 0.4s ease;
 
     &:hover .more_info {
       animation-name: ${breatheAnimation};
