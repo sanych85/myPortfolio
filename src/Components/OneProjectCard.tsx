@@ -33,15 +33,15 @@ const OneProject: React.FC<ProjectCard> = ({
 
   return (
     <StyledLi>
-      <figure className="imgWrapper">
-        <StyledLink to={`${id}`} className="more_info ">
+      <div  className="imgWrapper">
+        <StyledLink to={`/projects/${id}`} className="more_info ">
           More
         </StyledLink>
         <img src={mainImg} alt={name} />
-        <StyledCaption >
+        <StyledHeading  type = "h3">
           {name}
-        </StyledCaption>
-      </figure>
+        </StyledHeading>
+      </div>
 
       <CardFooter>
         {/* <hr /> */}

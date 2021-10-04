@@ -31,7 +31,7 @@ const SingleProjectPage = () => {
   //   const [style, setStyle] = useState('0px');
   console.log(currentIndex, 'currentIndex');
   const goBack = () => {
-    history.push("./");
+    history.push("/");
   };
 
   const handleClick = (type: string): void => {
