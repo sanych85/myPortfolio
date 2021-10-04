@@ -25,13 +25,13 @@ export const advantages = [
     },
     {
         id: 4,
-        name: " understanding business process",
+        name: " understanding business",
         svg: <FaBusinessTime/>,
         description: "Worked in all positions in business, from specialist to CEO "
     },
     {
         id: 5,
-        name: "good communication skills",
+        name: " communication skills",
         svg: <GiGiftOfKnowledge/>,
         description: "I am polite and ready for constructive criticism and any discussion"
     },

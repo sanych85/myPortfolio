@@ -114,6 +114,21 @@ const StyledHeading = styled(Heading)`
   transform: translate(-50%, -50%);
   z-index: 999;
   background-color: #464040e6;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.6s ease;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: #464040e6;
+  font-family: "Love Ya Like A Sister";
+  color: violet;
+  font-size: 1.2rem;
 `;
 const breatheAnimation = keyframes`
 0% {

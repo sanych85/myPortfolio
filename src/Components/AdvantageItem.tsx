@@ -29,7 +29,7 @@ const Li = styled.li`
   align-items: center;
   max-width: 200px;
   margin: 2rem 4.5rem;
-  background-color: #287bff;
+  background-color: #287bff45;
   border-radius: 1rem;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -39,11 +39,11 @@ const Li = styled.li`
     content: '';
     position: absolute;
     top: -100px;
-    left: 0;
+    left: -115px;
     width: 100%;
     height: 150%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
-    transform: rotate(-20deg);
+    transform: rotate(37deg);
     pointer-events: none;
     filter: blur(5px);
   }
@@ -79,7 +79,7 @@ const SvgWrapper = styled.div`
     content: "";
     position: absolute;
     top:0;
-    right:2px;
+    right:28px;
     width: 35px;
     height: 35px;
     background: transparent;
@@ -97,7 +97,7 @@ const SvgWrapper = styled.div`
 const Description = styled.p`
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
 `;
 
 const CardWrapper = styled.div`
