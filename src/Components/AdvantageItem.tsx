@@ -35,6 +35,7 @@ const Li = styled.li`
   border-bottom-right-radius: 100px;
   position: relative;
   overflow: hidden;
+ 
   &::before {
     content: '';
     position: absolute;

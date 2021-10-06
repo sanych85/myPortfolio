@@ -3,6 +3,7 @@ import {FiFastForward} from "react-icons/fi"
 import {GiGiftOfKnowledge} from "react-icons/gi"
 import {BsPeopleFill} from "react-icons/bs"
 import {VscLibrary} from "react-icons/vsc"
+import {SiTeamspeak} from "react-icons/si"
 
 export const advantages = [
     {
@@ -32,7 +33,7 @@ export const advantages = [
     {
         id: 5,
         name: " communication skills",
-        svg: <GiGiftOfKnowledge/>,
+        svg: <SiTeamspeak/>,
         description: "I am polite and ready for constructive criticism and any discussion"
     },
     {

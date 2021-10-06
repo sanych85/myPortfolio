@@ -4,6 +4,7 @@ import { Heading } from '.';
 import { MainSectionWrapper } from './commonComponents';
 import { projects } from '../data/projects.js';
 import OneProjectCard from './OneProjectCard';
+import OneProjectCopy from './OneProjectsCopyCard';
 
 
 
@@ -16,7 +17,7 @@ const ProjectsInfo = () => {
           <Heading type="h3" fontFamily="Roboto">Projects</Heading>
           <InnerWrapper as = "ul">
             {projects.map((project) => {
-              return <OneProjectCard key={project.id} {...project} />;
+              return <OneProjectCopy key={project.id} {...project} />;
             })}
           </InnerWrapper>
         </Wrapper> 

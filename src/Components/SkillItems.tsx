@@ -56,6 +56,7 @@ const StyledLi = styled.li<SkillInterface>`
   flex-direction: column;
   justify-content: center;
   width: 15%;
+
   
   p {
     margin: 0rem;
@@ -80,9 +81,16 @@ const StyledLi = styled.li<SkillInterface>`
     border-radius: 5px;
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
     position: relative;
     overflow : hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      /* inset: 14px; */
+    }
     &:hover:before {
       content: "";
       position: absolute;
@@ -92,6 +100,7 @@ const StyledLi = styled.li<SkillInterface>`
       animation: ${borderAnimation} 2s linear infinite;
   
     }
+
     &:hover:after {
       content: "";
       position: absolute;
