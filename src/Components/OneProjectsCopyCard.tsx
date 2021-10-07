@@ -38,13 +38,12 @@ const OneProjectCopy: React.FC<ProjectCard> = ({
         <StyledHeading type="h3">{name}</StyledHeading>
 
         {/* <hr /> */}
-        <RepoAndSite repo={repo} live={live} />
-
-        <div className = "more">
+        <div className="more">
           <StyledLink to={`/projects/${id}`} className="more_info ">
-            More
+            More Info
           </StyledLink>
         </div>
+        <RepoAndSite repo={repo} live={live} />
       </div>
     </StyledLi>
   );
@@ -61,7 +60,6 @@ const StyledLink = styled(Link)`
   color: #d4cccc;
   background-color: #102a3a;
 
- 
   font-size: 1.1rem;
   z-index: 999;
   transition: all 0.6s ease;
@@ -77,6 +75,7 @@ const StyledLi = styled.li`
   list-style: none;
   width: 346px;
   margin: 1rem;
+  transition: all 0.5s ease;
   /* position: relative; */
   &:hover {
     .front {
@@ -87,13 +86,13 @@ const StyledLi = styled.li`
       flex-direction: column;
       align-items: center;
 
-    justify-content: space-around;
+      justify-content: space-around;
       transform: perspective(600px) rotateY(0);
     }
   }
   height: 238px;
   .more {
-      display: inline-flex;
+    display: inline-flex;
   }
   .front,
   .back {
@@ -107,7 +106,13 @@ const StyledLi = styled.li`
     backface-visibility: hidden;
     --webkit-backface-visibility: hidden;
     transition: transform 0.9s ease;
-    background: red;
+    background: rgb(242, 242, 242);
+    background: radial-gradient(
+      circle,
+      rgba(242, 242, 242, 0.98) 0%,
+      rgba(202, 212, 232, 0.7539390756302521) 100%
+    );
+    
   }
 
   .front {
@@ -120,7 +125,6 @@ const StyledLi = styled.li`
 
   .back {
     transform: perspective(600px) rotateY(180deg);
-
   }
   .imgWrapper {
     position: relative;
