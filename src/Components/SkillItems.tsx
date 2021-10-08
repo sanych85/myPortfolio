@@ -55,7 +55,9 @@ const StyledLi = styled.li<SkillInterface>`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 15%;
+  /* width: 15%; */
+  min-width: 200px;
+  max-width: 300px;
 
   
   p {

@@ -22,14 +22,15 @@ export const ProgressBar: React.FC<Progress> = ({ stars }) => {
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
   width: 90%;
   height: 15px;
  
 `;
 
 const StyledStar = styled.div`
-  height: 15px;
-  width: 10%;
+  height: 10px;
+  width: 10px;
   border: 1px solid #0000002d;
   border-radius: 10px;
   &:not(:last-child) {

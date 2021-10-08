@@ -2,10 +2,15 @@ import { navigationLinks } from '../data/links';
 import styled, {keyframes} from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+interface NavbarProps  {
+  type?: "footerNavbar" 
+}
+
+const Navbar:React.FC<NavbarProps> = ({type}) => {
+  console.log(type, "type")
   return (
     <StyledNavbar>
-      <StyledUl>
+      <StyledUl type= {type}>
         {navigationLinks.map(({ name, link, id }) => {
           return (
             <StyledLi key={id}>
@@ -43,10 +48,13 @@ const StyledNavbar = styled.nav`
   animation-fill-mode: backwards;
 `;
 
-const StyledUl = styled.ul`
+const StyledUl = styled.ul<NavbarProps>`
   display: flex;
   justify-content: flex-end;
   margin-right: 3rem;
+  @media (max-width:768px) {
+    flex-direction: ${({type})=> type==="footerNavbar"? "column":"row"};
+  }
 `;
 
 const StyledLi = styled.li`

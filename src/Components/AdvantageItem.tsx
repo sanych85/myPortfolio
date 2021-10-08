@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Heading } from '.';
+import {device} from "./devices"
 
 interface Advantages {
   name: string;
@@ -14,7 +15,7 @@ const AdvantageItem: React.FC<Advantages> = ({ name, description, svg }) => {
       <SvgWrapper>{svg}</SvgWrapper>
       <CardWrapper>
         
-        <Heading type="h4">{name}</Heading>
+        <Heading type="h4" color = "#8d7635">{name}</Heading>
         <Description>{description}</Description>
       </CardWrapper>
     </Li>
@@ -29,12 +30,15 @@ const Li = styled.li`
   align-items: center;
   max-width: 200px;
   margin: 2rem 4.5rem;
-  background-color: #287bff45;
+  background-color: #287bff45; 
   border-radius: 1rem;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   position: relative;
   overflow: hidden;
+  @media ${device.laptop} {
+    margin:1rem 0.5rem;
+  }
  
   &::before {
     content: '';
@@ -48,6 +52,12 @@ const Li = styled.li`
     pointer-events: none;
     filter: blur(5px);
   }
+
+  &:hover:before {
+    background: linear-gradient(90deg, transparent, rgba(191, 194, 241, 0.3));
+    cursor: pointer;
+  }
+
   svg {
     width: 45px;
     height: 45px;

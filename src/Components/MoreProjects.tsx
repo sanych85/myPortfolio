@@ -11,7 +11,7 @@ const MoreProjects: React.FC<MoreProjectsProps> = ({ id }) => {
   console.log(typeof id);
   return (
     <Wrapper>
-      <Heading type="h3">Another project</Heading>
+      <Heading type="h4">Another projects</Heading>
       <ProjectWrapper>
         {projects
           .filter((project) => project.id !== id)

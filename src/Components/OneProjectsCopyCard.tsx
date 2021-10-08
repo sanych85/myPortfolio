@@ -35,7 +35,7 @@ const OneProjectCopy: React.FC<ProjectCard> = ({
         <img src={mainImg} alt={name} />
       </div>
       <div className="back">
-        <StyledHeading type="h3">{name}</StyledHeading>
+        <StyledHeading type="h3" color = "#504a89">{name}</StyledHeading>
 
         {/* <hr /> */}
         <div className="more">

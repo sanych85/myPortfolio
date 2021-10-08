@@ -63,15 +63,22 @@ export default Intro;
 
 const Wrapper = styled(MainSectionWrapper)`
 margin-bottom: 69px;
+@media (max-width: 600px) {
+   flex-direction: column;
+  }
+
 `;
 
 const LeftSection = styled.section`
   width: 50%;
+  @media (max-width: 600px) {
+    width: 100%
+  }
 `;
 
 const About = styled.section`
   height: 100%;
-  width: 50%;
+  width: 100%;
   margin-bottom: 200px;
   position: relative;
   /* opacity: 0; */

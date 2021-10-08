@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { CopyRight, Navbar, SocialLinks } from '.';
 
+
+
 const Footer = () => {
   return (
     <StyledFooter>
       <Wrapper>
-        <Navbar />
+        <Navbar type = 'footerNavbar' />
         <CopyRight />
         <SocialLinks />
       </Wrapper>
@@ -21,7 +23,7 @@ const StyledFooter = styled.footer`
   justify-content: center;
   width: 100%;
   background-color: #f4fffff2;
-  height: 100px;
+
 `;
 
 const Wrapper = styled.section`
@@ -29,4 +31,5 @@ const Wrapper = styled.section`
   width: 70%;
   justify-content: space-evenly;
   align-items: center;
+  
 `;
