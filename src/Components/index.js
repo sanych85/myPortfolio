@@ -18,6 +18,8 @@ import Education from './Educations';
 import Career from './Career';
 import WhyYouShouldHire from './WhyYouShouldHire';
 import AdvantageItem from './AdvantageItem';
+import SingleSkill from './SingleSkill';
+
 
 export {
   Heading,
@@ -40,4 +42,5 @@ export {
   Career,
   WhyYouShouldHire,
   AdvantageItem,
+  SingleSkill
 };

@@ -22,7 +22,7 @@ export const advantages = [
         id: 3,
         name: "english level",
         svg: <GiGiftOfKnowledge/>,
-        description: "My english level allow me 100% understanding all written and spoken english text"
+        description: "My english level allow me 100% understanding all written and spoken english"
     },
     {
         id: 4,

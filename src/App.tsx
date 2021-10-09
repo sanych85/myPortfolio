@@ -48,4 +48,5 @@ const MainWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   background-color: #f4ece9;
+  padding:0rem
 `;

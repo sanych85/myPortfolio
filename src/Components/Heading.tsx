@@ -13,6 +13,7 @@ interface HeadingProps {
 interface StyledHeading {
     color?: string;
     fontFamily?: string | undefined;
+  
 }
 
 const renderHead = (type: string, children: React.ReactNode, rest: any) => {

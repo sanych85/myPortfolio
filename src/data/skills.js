@@ -47,7 +47,7 @@ export const skills = [
     },
     {
         name: <SiStyledComponents/>,
-        text: "StyledComponents",
+        text: "StyledCom",
         knowledge: "8",
         color: "#9f683f"
     },

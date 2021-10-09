@@ -24,4 +24,5 @@ export const VerticalWrapper = styled.div`
 export const MainSectionWrapper = styled(HorizontalWrapper) `
   width: 70%;
   min-height: 100vh;
+  padding:0px
 `

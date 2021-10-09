@@ -38,6 +38,7 @@ background-color: f4ece9;
 
 const InnerWrapper = styled(MainSectionWrapper) `
 flex-wrap: wrap;
+padding: 0px;
 `
 
 const MainWrapper = styled.div `

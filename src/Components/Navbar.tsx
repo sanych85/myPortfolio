@@ -1,59 +1,96 @@
+import { useState } from 'react';
 import { navigationLinks } from '../data/links';
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { device } from './devices';
 
-interface NavbarProps  {
-  type?: "footerNavbar" 
+interface NavbarProps {
+  type?: 'footerNavbar';
 }
 
-const Navbar:React.FC<NavbarProps> = ({type}) => {
-  console.log(type, "type")
+interface ToggleProps {
+  isToggle?: boolean;
+  type?: 'footerNavbar';
+}
+
+const Navbar: React.FC<NavbarProps> = ({ type }) => {
+  const [isToggle, setToggle] = useState(false);
+  console.log(isToggle);
+  const displayMenu = () => {
+    setToggle(prev=>!prev);
+  };
+  console.log(type, 'type');
   return (
-    <StyledNavbar>
-      <StyledUl type= {type}>
-        {navigationLinks.map(({ name, link, id }) => {
-          return (
-            <StyledLi key={id}>
-              <StyledLink exact to={link}>
-                {name}
-              </StyledLink>
-            </StyledLi>
-          );
-        })}
-      </StyledUl>
-    </StyledNavbar>
+    <>
+      {type !== 'footerNavbar' && (
+        <Toggle onClick={displayMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </Toggle>
+      )}
+
+      <StyledNavbar type={type} isToggle={isToggle}>
+        <StyledUl isToggle={isToggle}>
+          {navigationLinks.map(({ name, link, id }) => {
+            return (
+              <StyledLi key={id}>
+                <StyledLink exact to={link}>
+                  {name}
+                </StyledLink>
+              </StyledLi>
+            );
+          })}
+        </StyledUl>
+      </StyledNavbar>
+    </>
   );
 };
 
 export default Navbar;
 
-const navbarAnimation = keyframes `
+const navbarAnimation = keyframes`
 0% {
-  transform: translateX(-200px);
-  opacity:0;
+  width:0px
+  /* opacity:0; */
 }
 
 100% {
-  transform: translateX(0px);
-  opacity:1;
+  /* transform: translateX(0px);
+  opacity:1; */
+  width:100%
 }
-`
-
-
-
-const StyledNavbar = styled.nav`
-  animation-name: ${navbarAnimation};
-  animation-duration: 1s;
-  animation-delay: 0.9s;
-  animation-fill-mode: backwards;
 `;
 
-const StyledUl = styled.ul<NavbarProps>`
+const StyledNavbar = styled.nav<ToggleProps>`
+  animation-name: ${navbarAnimation};
+  animation-duration: 0.5s;
+  /* animation-delay: 0.9s; */
+  animation-fill-mode: backwards;
+  @media ${device.tablet} {
+    display: ${({ isToggle }) => (isToggle ? 'flex' : 'none')};
+    height: ${({ type }) => type !== 'footerNavbar' && '100vh'};
+    width: 100vw;
+    justify-content: center;
+    flex-direction: ${({ type }) => (type === 'footerNavbar' ? 'column' : '')};
+    background-color: #5877b9;
+    z-index: 99;
+    
+
+    /* position: fixed; */
+  }
+`;
+
+const StyledUl = styled.ul <ToggleProps>`
   display: flex;
-  justify-content: flex-end;
+  justify-content: ${({isToggle})=>isToggle?"center":"flex-end"};
   margin-right: 3rem;
-  @media (max-width:768px) {
-    flex-direction: ${({type})=> type==="footerNavbar"? "column":"row"};
+  margin-top: ${({isToggle})=>isToggle?"30px":"0rem"};
+  @media ${device.tablet} {
+    /* min-height: ${({isToggle})=>isToggle && "calc(100vh - 70px)"}; */
+    flex-direction: column;
+    margin: 0rem;
+    padding: 0px;
   }
 `;
 
@@ -69,12 +106,16 @@ const StyledLi = styled.li`
 
 const StyledLink = styled(NavLink)`
   text-decoration: none;
-  font-family: "Love Ya Like A Sister", "sans-serif" ;
+  font-family: 'Love Ya Like A Sister', 'sans-serif';
   font-size: 20px;
-  transition: all 0.8s ease;
+  
+  /* transition: all 0.8s ease; */
   position: relative;
+  @media ${device.tablet} {
+    font-size: 26px;
+  }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -87,7 +128,30 @@ const StyledLink = styled(NavLink)`
     color: #abe6de;
   }
   &:hover:before {
-   width: 100%;
-   bottom: -5px;
+    width: 100%;
+    bottom: -5px;
+  }
+`;
+
+const Toggle = styled.div<ToggleProps>`
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  @media ${device.tablet} {
+    display: ${({ isToggle }) => (isToggle ? 'none' : 'flex')};
+  }
+
+  div {
+    height: 1px;
+    width: 30px;
+    background-color: black;
+    margin: 4px;
   }
 `;

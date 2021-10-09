@@ -2,6 +2,7 @@ import styled, {keyframes}  from 'styled-components';
 import { MainSectionWrapper } from './commonComponents/MainWrapper';
 import myPhoto from '../img/myPhoto2.jpg';
 import { Heading, SocialLinks } from '.';
+import { device } from './devices';
 
 const Intro = () => {
   return (
@@ -19,10 +20,10 @@ const Intro = () => {
         <Heading type="h2" color="#574a70" fontFamily="Love Ya Like A Sister ">
           Alex Shatokhin
         </Heading>
-        <p className="about-information">
+        <AboutInformation>
           A Front-End Web Developer passionate about creating interactive
           applications and experiences on the web.
-        </p>
+        </AboutInformation>
         <SocialLinks />
       </About>
     </Wrapper>
@@ -63,22 +64,27 @@ export default Intro;
 
 const Wrapper = styled(MainSectionWrapper)`
 margin-bottom: 69px;
-@media (max-width: 600px) {
+min-height: calc(100vh - 100px);
+@media ${device.laptop} {
    flex-direction: column;
+   min-height:auto;
+   width: 100%;
+   margin-bottom: 0px;
   }
-
+ 
 `;
 
 const LeftSection = styled.section`
   width: 50%;
-  @media (max-width: 600px) {
-    width: 100%
+  @media ${device.laptop} {
+    width: 100%;
+    margin-top: 4rem;
   }
 `;
 
 const About = styled.section`
   height: 100%;
-  width: 100%;
+  width: 50%;
   margin-bottom: 200px;
   position: relative;
   /* opacity: 0; */
@@ -86,11 +92,21 @@ const About = styled.section`
   animation-duration: 1s;
   animation-delay: 0.6s;
   animation-fill-mode: backwards;
-
-  .about-information {
-    font-size: 1.2rem;
+  @media ${device.laptop} {
+    width: 100%;
+    margin-bottom: 20px;
+    
   }
+
 `;
+
+const AboutInformation =styled.p `
+font-size: 1.2rem;
+padding-left: 1rem;
+padding-right: 1rem;
+`
+
+
 
 const ImgWrapper = styled.figure`
   display: flex;
@@ -112,9 +128,12 @@ const ImgWrapper = styled.figure`
     height: 100%;
     border-radius: 10px;
     z-index:2;
-   
- 
+
     border: 3px solid black;
+    @media ${device.laptop} {
+      left: 3rem;
+    bottom: 1rem;
+    }
   }
 `;
 

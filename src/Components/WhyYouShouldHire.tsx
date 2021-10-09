@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { AdvantageItem, Heading } from '.';
 import { advantages } from '../data/advantages';
+import { device } from './devices';
 
 const WhyYouShouldHire = () => {
   return (
@@ -23,6 +24,7 @@ const Wrapper = styled.section`
   width: 100%;
   flex-direction: column;
   align-items: center;
+  
 
 `;
 const InnerWrapper = styled.ul`
@@ -30,6 +32,15 @@ const InnerWrapper = styled.ul`
   flex-wrap: wrap;
   width: 70%;
   justify-content: center;
+  padding:0rem;
+  @media ${device.laptop} {
+    width:85%;
+    padding:0px;
+  }
+  @media ${device.laptop} {
+    width:100%;
+    padding:0px;
+  }
   /* align-items: center; */
 
 `;
