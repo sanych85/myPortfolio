@@ -33,14 +33,11 @@ const InnerWrapper = styled.ul`
   width: 70%;
   justify-content: center;
   padding:0rem;
-  @media ${device.laptop} {
-    width:85%;
-    padding:0px;
-  }
-  @media ${device.laptop} {
+  @media ${device.laptopL} {
     width:100%;
     padding:0px;
   }
+
   /* align-items: center; */
 
 `;

@@ -32,7 +32,7 @@ const StyledUl = styled.ul`
   flex-wrap: wrap;
   padding: 0rem;
   width: 70%;
-  @media ${device.laptop} {
+  @media ${device.laptopL} {
     width: 100%;
   }
 `;
