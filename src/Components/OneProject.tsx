@@ -22,7 +22,7 @@ export interface ProjectCard {
   };
 }
 
-const OneProjectCopy: React.FC<ProjectCard> = ({
+const OneProject: React.FC<ProjectCard> = ({
   name,
   repo,
   live,
@@ -49,7 +49,7 @@ const OneProjectCopy: React.FC<ProjectCard> = ({
   );
 };
 
-export default OneProjectCopy;
+export default OneProject;
 
 const StyledLink = styled(Link)`
   border-radius: 5px;
@@ -59,10 +59,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: #d4cccc;
   background-color: #102a3a;
-
   font-size: 1.1rem;
   z-index: 999;
   transition: all 0.6s ease;
+
 `;
 
 const StyledHeading = styled(Heading)``;
@@ -76,6 +76,8 @@ const StyledLi = styled.li`
   width: 346px;
   margin: 1rem;
   transition: all 0.5s ease;
+  
+  /* box-shadow: 5px 5px 8px rgba(43, 77, 146, 0.754); */
   /* position: relative; */
   &:hover {
     .front {

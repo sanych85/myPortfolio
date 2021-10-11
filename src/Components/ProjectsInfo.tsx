@@ -4,7 +4,8 @@ import { Heading } from '.';
 import { MainSectionWrapper } from './commonComponents';
 import { projects } from '../data/projects.js';
 import OneProjectCard from './OneProjectCard';
-import OneProjectCopy from './OneProjectsCopyCard';
+import OneProject from './OneProject';
+import { device } from './devices';
 
 
 
@@ -17,7 +18,7 @@ const ProjectsInfo = () => {
           <Heading type="h3" fontFamily="Roboto">Projects</Heading>
           <InnerWrapper as = "ul">
             {projects.map((project) => {
-              return <OneProjectCopy key={project.id} {...project} />;
+              return <OneProject key={project.id} {...project} />;
             })}
           </InnerWrapper>
         </Wrapper> 
@@ -30,8 +31,11 @@ export default ProjectsInfo;
 
 const Wrapper = styled(MainSectionWrapper)`
 flex-direction: column;
-width: 100%;
-background-color: f4ece9;
+width: 70%;
+background-color: #f4ece9;
+@media ${device.laptopL} {
+  width:100%
+}
 /* width: 90%; */
 `;
 
@@ -39,6 +43,7 @@ background-color: f4ece9;
 const InnerWrapper = styled(MainSectionWrapper) `
 flex-wrap: wrap;
 padding: 0px;
+width:100%;
 `
 
 const MainWrapper = styled.div `

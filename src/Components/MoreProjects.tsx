@@ -37,4 +37,5 @@ const Wrapper = styled.div`
 `;
 const ProjectWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;

@@ -5,6 +5,7 @@ import { projects } from '../data/projects';
 import { ProjectCard } from '../Components/OneProjectCard';
 import { Button, Heading, MoreProjects ,RepoAndSite} from '../Components'; 
 import { BsCaretLeftFill, BsCaretRightFill } from 'react-icons/bs';
+import { device } from '../Components/devices';
 
 
 interface RouteParams {
@@ -60,7 +61,7 @@ const SingleProjectPage = () => {
             <TechologyItem key={i}>{technology}</TechologyItem>
           ))}
         </Techologies>
-        <ProectWrapper>
+        <ProjectWrapper>
           <ImgWrapper>
             {imgs.map((image: string, i: string) => (
               <Figure key={i}>
@@ -83,7 +84,7 @@ const SingleProjectPage = () => {
 
             <RepoAndSite repo={repo} live={live} />
           </Info>
-        </ProectWrapper>
+        </ProjectWrapper>
         <Button func={goBack} color = "white" colorHover = "black" bgColor = "black" bgColorHover = "white">back</Button>
         
       </Section>
@@ -116,6 +117,15 @@ box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 /* background-color: #f5f5dc47; */
 background-color: #ffffff85;
 border-radius: 10px;
+`;
+
+const ProjectWrapper = styled.div`
+  display: flex;
+  margin: 1.5rem;
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
+  /* flex: 1; */
 `;
 
 const Figure = styled.figure`
@@ -160,11 +170,7 @@ const Techologies = styled.div`
   display: flex;
 `;
 
-const ProectWrapper = styled.div`
-  display: flex;
-  margin: 1.5rem;
-  /* flex: 1; */
-`;
+
 const TechologyItem = styled.span`
   padding: 5px 10px;
   background-color: beige;
