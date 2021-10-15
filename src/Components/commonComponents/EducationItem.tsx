@@ -4,6 +4,7 @@ import { Heading } from '..';
 import {IoMdSchool,} from "react-icons/io";
 import {BsCalendar} from "react-icons/bs"
 import {FaUniversity} from "react-icons/fa" 
+import { device } from '../devices';
 interface EducationInterface {
   id: number;
   speciality: string;
@@ -40,7 +41,7 @@ const Wrapper = styled.div`
   align-items: center;
 
   /* align-items: center; */
-  width: 50%;
+  flex:1;
   margin: 2rem auto;
   gap: 1rem;
 

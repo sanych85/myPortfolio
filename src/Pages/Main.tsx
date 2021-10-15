@@ -8,11 +8,10 @@ const Main = () => {
     <StyledMain>
       <Intro />
       <Education />
-      <WhyYouShouldHire/>
+      <WhyYouShouldHire />
       <Career />
       <Skills />
       <ProjectsInfo />
- 
     </StyledMain>
   );
 };

@@ -1,4 +1,4 @@
-import styled, {keyframes}  from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { MainSectionWrapper } from './commonComponents/MainWrapper';
 import myPhoto from '../img/myPhoto2.jpg';
 import { Heading, SocialLinks } from '.';
@@ -45,7 +45,7 @@ const titleAnimation = keyframes`
 }
 `;
 
-const aboutAnimation = keyframes `
+const aboutAnimation = keyframes`
 0% {
   transform: translateY(50px);
   opacity:0;
@@ -57,26 +57,32 @@ const aboutAnimation = keyframes `
   transform: translateY(0px);
   opacity:1;
 }
-`
-
+`;
 
 export default Intro;
 
 const Wrapper = styled(MainSectionWrapper)`
-margin-bottom: 69px;
-min-height: calc(100vh - 100px);
-@media ${device.laptop} {
-   flex-direction: column;
-   min-height:auto;
-   width: 100%;
-   margin-bottom: 0px;
+  flex-wrap: wrap;
+  margin-bottom: 69px;
+  min-height: calc(100vh - 100px);
+  @media ${device.laptopM} {
+    min-height: auto;
+    width: 100%;
+    margin-bottom: 0px;
   }
- 
+  @media ${device.tablet} { 
+    flex-direction: column;
+    min-height: auto;
+  }
 `;
 
 const LeftSection = styled.section`
-  width: 50%;
-  @media ${device.laptop} {
+  /* width: 50%; */
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  @media ${device.laptopM} {
     width: 100%;
     margin-top: 4rem;
   }
@@ -84,7 +90,7 @@ const LeftSection = styled.section`
 
 const About = styled.section`
   height: 100%;
-  width: 50%;
+  flex: 1;
   margin-bottom: 200px;
   position: relative;
   /* opacity: 0; */
@@ -94,56 +100,57 @@ const About = styled.section`
   animation-fill-mode: backwards;
   @media ${device.laptop} {
     width: 100%;
-    margin-bottom: 20px;
-    
+    margin-bottom: 3rem;
   }
-
 `;
 
-const AboutInformation =styled.p `
-font-size: 1.2rem;
-padding-left: 1rem;
-padding-right: 1rem;
-`
-
-
+const AboutInformation = styled.p`
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+`;
 
 const ImgWrapper = styled.figure`
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  
+  /* width: 60%; */
   margin-right: 1rem;
   /* margin-bottom: 200px; */
   position: relative;
   animation-name: ${titleAnimation};
   animation-duration: 1s;
   animation-fill-mode: forwards;
+
   &:before {
     content: '';
     display: block;
     position: absolute;
-    left: 4rem;
-    bottom: 3rem;
-    width: 60%;
+    left: -1.5rem;
+    bottom: 1.5rem;
+    width: 100%;
     height: 100%;
     border-radius: 10px;
-    z-index:2;
+    z-index: 2;
 
     border: 3px solid black;
     @media ${device.laptop} {
-      left: 3rem;
-    bottom: 1rem;
+      left: -1rem;
+      bottom: 1rem;
     }
   }
 `;
 
 const Img = styled.img`
-  width: 60%;
-   border-radius: 10px;
+  max-width: 400px;
+  border-radius: 10px;
 
   /* border-radius: 50%; */
   /* -webkit-box-shadow: 6px 0 #34286936, 12px 0 #8070964b, 18px 0 #a876f33b;
   box-shadow: 6px 0 #34286936, 12px 0 #8070964b, 18px 0 #a876f33b; */
   position: relative;
-  z-index: 3
+  z-index: 3;
+  filter: drop-shadow(16px 16px 10px black);
+  @media ${device.laptop} {
+    max-width: 250px;
+  }
 `;

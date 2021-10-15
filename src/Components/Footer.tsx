@@ -23,6 +23,8 @@ const StyledFooter = styled.footer`
   justify-content: center;
   width: 100%;
   background-color: #f4fffff2;
+  padding-top:1rem ;
+  padding-bottom: 1rem;
 
 `;
 

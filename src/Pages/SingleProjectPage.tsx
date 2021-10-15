@@ -3,10 +3,10 @@ import { useHistory, useParams } from 'react-router';
 import styled from 'styled-components';
 import { projects } from '../data/projects';
 import { ProjectCard } from '../Components/OneProjectCard';
-import { Button, Heading, MoreProjects ,RepoAndSite} from '../Components'; 
+import { Button, Heading, MoreProjects, RepoAndSite } from '../Components';
 import { BsCaretLeftFill, BsCaretRightFill } from 'react-icons/bs';
 import { device } from '../Components/devices';
-
+import Slider from '../Components/Slider';
 
 interface RouteParams {
   id: string;
@@ -32,7 +32,7 @@ const SingleProjectPage = () => {
   //   const [style, setStyle] = useState('0px');
   console.log(currentIndex, 'currentIndex');
   const goBack = () => {
-    history.push("/");
+    history.push('/');
   };
 
   const handleClick = (type: string): void => {
@@ -49,7 +49,16 @@ const SingleProjectPage = () => {
         ? setCurrentIndex(0)
         : setCurrentIndex((prev) => prev + 1);
     }
+
+
   };
+  useEffect(() => {
+    console.log("in use Effect")
+    const interval = setInterval(()=>handleClick('right'), 4000)
+    return () => clearInterval(interval);
+    }
+  )
+
   return (
     <Main>
       <Section>
@@ -62,34 +71,26 @@ const SingleProjectPage = () => {
           ))}
         </Techologies>
         <ProjectWrapper>
-          <ImgWrapper>
-            {imgs.map((image: string, i: string) => (
-              <Figure key={i}>
-                <BsCaretLeftFill
-                  onClick={() => handleClick('left')}
-                  className="left-arrow"
-                />
-                <SliderImage src={imgs[currentIndex]} alt="" />
-                <BsCaretRightFill
-                  onClick={() => handleClick('right')}
-                  className="right-arrow"
-                />
-              </Figure>
-            ))}
-          </ImgWrapper>
+            <Slider imgs = {imgs}/>
 
           <Info>
-              <Release>Release year: {releasedYear}</Release>
+            <Release>Release year: {releasedYear}</Release>
             <Description>{description}</Description>
 
             <RepoAndSite repo={repo} live={live} />
           </Info>
         </ProjectWrapper>
-        <Button func={goBack} color = "white" colorHover = "black" bgColor = "black" bgColorHover = "white">back</Button>
-        
+        <Button
+          func={goBack}
+          color="white"
+          colorHover="white"
+          bgColor="#836060"
+          bgColorHover="#ad7373">
+          back
+        </Button>
       </Section>
       <Section>
-          <MoreProjects id= {id}/>
+        <MoreProjects id={id} />
       </Section>
     </Main>
   );
@@ -102,7 +103,7 @@ const Main = styled.main`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom:3rem;
+  margin-bottom: 3rem;
 `;
 
 const Section = styled.section`
@@ -110,66 +111,39 @@ const Section = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
+  width: 70%;
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
--moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
-/* background-color: #f5f5dc47; */
-background-color: #ffffff85;
-border-radius: 10px;
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  /* background-color: #f5f5dc47; */
+  background-color: #ffffff85;
+  border-radius: 10px;
+  @media ${device.laptop} {
+    width: 100%;
+  }
 `;
 
 const ProjectWrapper = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1.5rem;
   @media ${device.tablet} {
+    width: 100%;
     flex-direction: column;
   }
   /* flex: 1; */
 `;
 
-const Figure = styled.figure`
-  /* position: relative; */
-  width: 519px;
-  height: 357px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  margin: 1rem;
-  svg {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #412e861f;
-    transition: all 0.3s ease;
-    &:hover {
-      cursor: pointer;
-      color: #412e86dd;
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 110%;
-        height: 110%;
-      }
-    }
-  }
-  .left-arrow {
-    left: -6%;
-  }
-  .right-arrow {
-    right: -6%;
-  }
-`;
 
 const Description = styled.p``;
 
 const Techologies = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
 `;
-
 
 const TechologyItem = styled.span`
   padding: 5px 10px;
@@ -181,33 +155,14 @@ const TechologyItem = styled.span`
 const Info = styled.div`
   display: flex;
   flex-direction: column;
-
-`;
-const ImgWrapper = styled.div`
-  /* overflow: hidden; */
-  position: relative;
-  display: flex;
-  width: 519px;
-  height: 357px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @media ${device.tablet} {
+    margin-top: 1rem;
+  }
 `;
 
-const SliderImage = styled.img`
-  width: 519px;
-  height: 357px;
-  position: absolute;
-  transition: all 0.3s ease;
-  top: 0;
-  left: 0;
-  /* &:hover {
-    width: 600px;
-    height: 400px;
-} */
+const Release = styled.span`
+  font-family: 'Titan One', sans-serif;
+  color: #4b4b86;
 `;
-
-const Release = styled.span ` 
-font-family: "Titan One", sans-serif;
-color: #4b4b86
-`

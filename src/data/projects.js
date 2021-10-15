@@ -11,7 +11,7 @@ import ScreenShot1 from '../img/screenshot portfolio/cc4bizness/Screenshot_6.png
 import ScreenShot2 from '../img/screenshot portfolio/cc4bizness/Screenshot_7.png';
 import ScreenShot3 from '../img/screenshot portfolio/cc4bizness/Screenshot_8.png';
 import ScreenShot4 from '../img/screenshot portfolio/cc4bizness/Screenshot_9.png';
-import { v4 as uuidv4 } from 'uuid';
+
 
 export const projects = [
   {

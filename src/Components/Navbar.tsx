@@ -49,23 +49,10 @@ const Navbar: React.FC<NavbarProps> = ({ type }) => {
 
 export default Navbar;
 
-const navbarAnimation = keyframes`
-0% {
-  width:0px
-  /* opacity:0; */
-}
 
-100% {
-  /* transform: translateX(0px);
-  opacity:1; */
-  width:100%
-}
-`;
 
 const StyledNavbar = styled.nav<ToggleProps>`
-  animation-name: ${navbarAnimation};
-  animation-duration: 0.5s;
-  /* animation-delay: 0.9s; */
+
   animation-fill-mode: backwards;
   @media ${device.tablet} {
     display: ${({ isToggle }) => (isToggle ? 'flex' : 'none')};
@@ -117,7 +104,7 @@ const StyledLink = styled(NavLink)`
   &:before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 0px;
     bottom: -5px;
     width: 0px;
     height: 1px;

@@ -33,9 +33,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   max-width: 80%;
 `;
 const ProjectWrapper = styled.div`
   display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 `;
