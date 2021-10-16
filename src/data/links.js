@@ -43,13 +43,13 @@ export const routingLinks = [
     component: About,
     exact: true,
   },
-  {
-    id: 3,
-    name: 'projects',
-    link: '/projects',
-    component: ProjectsPage,
-    exact: true,
-  },
+  // {
+  //   id: 3,
+  //   name: 'projects',
+  //   link: '/projects',
+  //   component: ProjectsPage,
+  //   exact: true,
+  // },
   {
     id: 4,
     name: 'project',
@@ -72,19 +72,29 @@ export const navigationLinks = [
     name: 'main',
     link: '/',
 
-    exact: true,
+   
   },
   {
     id: 2,
-    name: 'about',
-    link: '/about',
+    name: 'education',
+    link: '/#education',
 
-    exact: false,
+
   },
   {
     id: 3,
+    name: 'advantages',
+    link: '/#advantages',
+  },
+  {
+    id: 4,
+    name: 'skills',
+    link: '/#skills',
+  },
+  {
+    id: 5,
     name: 'projects',
-    link: '/projects',
+    link: '/#projects',
   },
 ];
 

@@ -7,7 +7,7 @@ import { device } from './devices';
 
 const Educations = () => {
   return (
-    <Wrapper>
+    <Wrapper id= "education">
       <Heading type="h3" fontFamily=" Roboto">
         Education
       </Heading>

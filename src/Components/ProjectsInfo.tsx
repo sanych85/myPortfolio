@@ -6,15 +6,16 @@ import { projects } from '../data/projects.js';
 import OneProjectCard from './OneProjectCard';
 import OneProject from './OneProject';
 import { device } from './devices';
-
+import { useParams } from 'react-router';
 
 
 
 const ProjectsInfo = () => {
-
+// const params = useParams()
+// console.log("PARAMS ON THE MAIN PAGE")
   return (
 
-        <Wrapper as="section">
+        <Wrapper as="section" id = "projects" >
           <Heading type="h3" fontFamily="Roboto">Projects</Heading>
           <InnerWrapper as = "ul">
             {projects.map((project) => {

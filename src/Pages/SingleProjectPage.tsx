@@ -12,8 +12,11 @@ interface RouteParams {
   id: string;
 }
 const SingleProjectPage = () => {
+  console.log("WE ARE IN SINGLE PAGE")
   const history = useHistory();
+  console.log("history", history)
   const params = useParams<RouteParams>();
+  console.log("params", params)
   const proj: any = projects.find((project) => {
     return project.id === +params.id;
   });

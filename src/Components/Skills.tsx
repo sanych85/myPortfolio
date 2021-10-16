@@ -9,7 +9,7 @@ import { Heading } from '.';
 const Skills = () => {
     return (
 
-        <Wrapper as = "section" className = "skills section wrapper">
+        <Wrapper as = "section" className = "skills section wrapper" id = "skills">
             <InnerWrapper>
                 <Heading type = "h3" fontFamily="Roboto">Skills</Heading>
                 <SkillItems />

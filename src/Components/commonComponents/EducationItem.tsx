@@ -54,12 +54,14 @@ const UnivercityAndYear = styled.div`
   flex: 1;
   justify-content: center;
   align-items: center;
+
   /* background-color: green; */
 `;
 
 const StyledHeading = styled(Heading) `
 margin: 0rem;
 font-size: 1rem;
+text-shadow: 1px 1px 2px #e1afaf, 0 0 1em #d1cecf, 0 0 0.3em #8f875f;
 `
 
 

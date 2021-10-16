@@ -6,7 +6,7 @@ import { device } from './devices';
 
 const WhyYouShouldHire = () => {
   return (
-    <Wrapper>
+    <Wrapper id = "advantages">
       <Heading type="h3" fontFamily = "Roboto">Why you should hire me</Heading>
       <InnerWrapper>
         {advantages.map((advantage) => (
