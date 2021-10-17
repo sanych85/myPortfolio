@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Heading, ProgressBar } from '.';
-
+import { ShowAnimation } from './commonComponents/Animations';
+import LazyLoad from 'react-lazyload';
 interface SkillInterface {
   name: JSX.Element;
   color: string;
@@ -20,12 +21,16 @@ const SingleSkill: React.FC<SkillInterface> = ({
   color,
 }) => {
   return (
-    <StyledLi >
-      <Skill className="skillName" color={color}>{name}</Skill>
-      <StyledHeading type="h4">{text}</StyledHeading>
-      {/* <span>{knowledge}</span> */}
-      <ProgressBar stars={knowledge} />
-    </StyledLi>
+    <LazyLoad height={200} offset={100}>
+      <StyledLi>
+        <Skill className="skillName" color={color}>
+          {name}
+        </Skill>
+        <StyledHeading type="h4">{text}</StyledHeading>
+        {/* <span>{knowledge}</span> */}
+        <ProgressBar stars={knowledge} />
+      </StyledLi>
+    </LazyLoad>
   );
 };
 
@@ -40,7 +45,6 @@ const borderAnimation = keyframes`
 }
 `;
 const StyledLi = styled.li`
-
   /* color ${({ color }) => color || ''}; */
   list-style: none;
   display: flex;
@@ -54,8 +58,10 @@ const StyledLi = styled.li`
   max-width: 300px; */
   margin: 0rem;
   border-radius: 5px;
-  margin:0.5rem;
-
+  margin: 0.5rem;
+  animation-name: ${ShowAnimation};
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   p {
     margin: 0rem;
     font-family: '';
@@ -79,7 +85,7 @@ const Skill = styled.div<StyledLiInterface>`
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   background-color: #dddddd;
   border-radius: 5px;
- 
+
   width: 100px;
   height: 100px;
   /* border: 1px solid #000; */
@@ -121,8 +127,8 @@ const Skill = styled.div<StyledLiInterface>`
   }
 `;
 
-const StyledHeading = styled(Heading) `
-font-size: 1.05rem;
-padding: 0.2rem;
-margin: 0.2rem;
-`
+const StyledHeading = styled(Heading)`
+  font-size: 1.05rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+`;

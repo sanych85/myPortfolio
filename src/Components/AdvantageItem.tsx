@@ -1,7 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { Heading } from '.';
-import {device} from "./devices"
+import  {ShowAnimation} from "./commonComponents/Animations"
+import { device } from './devices';
+import LazyLoad from 'react-lazyload';
 
 interface Advantages {
   name: string;
@@ -11,16 +13,23 @@ interface Advantages {
 
 const AdvantageItem: React.FC<Advantages> = ({ name, description, svg }) => {
   return (
-    <Li>
-      <SvgWrapper>{svg}</SvgWrapper>
-      <CardWrapper>
-        
-        <Heading type="h4" color = "#8d7635">{name}</Heading>
-        <Description>{description}</Description>
-      </CardWrapper>
-    </Li>
+    <LazyLoad height={-100} offset={0}> 
+      <Li>
+        <SvgWrapper>{svg}</SvgWrapper>
+        <CardWrapper>
+          <Heading type="h4" color="#8d7635">
+            {name}
+          </Heading>
+          <Description>{description}</Description>
+        </CardWrapper>
+      </Li>
+    </LazyLoad>
   );
 };
+
+
+
+
 
 export default AdvantageItem;
 
@@ -30,16 +39,19 @@ const Li = styled.li`
   align-items: center;
   max-width: 200px;
   margin: 2rem 4.5rem;
-  background-color: #287bff45; 
+  background-color: #287bff45;
   border-radius: 1rem;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   position: relative;
   overflow: hidden;
+  animation-name: ${ShowAnimation};
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   @media ${device.laptop} {
-    margin:1rem 0.5rem;
+    margin: 1rem 0.5rem;
   }
- 
+
   &::before {
     content: '';
     position: absolute;
@@ -68,42 +80,39 @@ const SvgWrapper = styled.div`
   display: flex;
   width: 78px;
   height: 56px;
-  background-color: #f4ece9 ;
+  background-color: #f4ece9;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   justify-content: center;
-  box-shadow: 0 10px 0 rgba(0,0,0,0.1);
-  inset: 0 -8px 0 rgba(255, 255,255,0.25),
-  0 45px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  inset: 0 -8px 0 rgba(255, 255, 255, 0.25), 0 45px 0 rgba(0, 0, 0, 0.1);
   &:before {
-    content: "";
+    content: '';
     position: absolute;
-    top:0;
-    left:28px;
+    top: 0;
+    left: 28px;
     width: 35px;
     height: 35px;
     background: transparent;
     border-top-right-radius: 50px;
-    box-shadow: 5px -15px 0 5px #f4ece9
+    box-shadow: 5px -15px 0 5px #f4ece9;
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
-    top:0;
-    right:28px;
+    top: 0;
+    right: 28px;
     width: 35px;
     height: 35px;
     background: transparent;
     border-top-left-radius: 50px;
-    box-shadow: -5px -15px 0 5px #f4ece9
+    box-shadow: -5px -15px 0 5px #f4ece9;
   }
   svg {
     width: 45px;
     height: 45px;
   }
 `;
-
-
 
 const Description = styled.p`
   padding-left: 1.5rem;
@@ -115,5 +124,4 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
 `;

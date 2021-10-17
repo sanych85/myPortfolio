@@ -62,6 +62,7 @@ const aboutAnimation = keyframes`
 export default Intro;
 
 const Wrapper = styled(MainSectionWrapper)`
+
   flex-wrap: wrap;
   margin-bottom: 69px;
   min-height: calc(100vh - 100px);

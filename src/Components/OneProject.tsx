@@ -1,13 +1,11 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components'; 
 import { Heading } from '.';
-// import { VerticalWrapper } from './commonComponents';
-// import { AiFillGithub } from 'react-icons/ai';
-// import { CgWebsite } from 'react-icons/cg';
-// import { useParams } from 'react-router';
+
 import { Link } from 'react-router-dom';
 import RepoAndSite from './RepoAndSite';
-// import { HashLink  } from 'react-router-hash-link';
+import LazyLoad from 'react-lazyload';
+import  {ShowAnimation} from "./commonComponents/Animations"
 
 export interface ProjectCard {
   name: string;
@@ -31,26 +29,31 @@ const OneProject: React.FC<ProjectCard> = ({
   id,
 }) => {
   return (
-    <StyledLi>
-      <div className="front">
-        <img src={mainImg} alt={name} />
-      </div>
-      <div className="back">
-        <StyledHeading type="h3" color = "#504a89">{name}</StyledHeading>
-
-        {/* <hr /> */}
-        <div className="more">
-          <StyledLink to={`/projects/${id}`} className="more_info ">
-            More Info
-          </StyledLink>
+    <LazyLoad height={200} offset={100}>
+      <StyledLi>
+        <div className="front">
+          <img src={mainImg} alt={name} />
         </div>
-        <RepoAndSite repo={repo} live={live} />
-      </div>
-    </StyledLi>
+        <div className="back">
+          <StyledHeading type="h3" color="#504a89">
+            {name}
+          </StyledHeading>
+
+          {/* <hr /> */}
+          <div className="more">
+            <StyledLink to={`/projects/${id}`} className="more_info ">
+              More Info
+            </StyledLink>
+          </div>
+          <RepoAndSite repo={repo} live={live} />
+        </div>
+      </StyledLi>
+    </LazyLoad>
   );
 };
 
 export default OneProject;
+
 
 const StyledLink = styled(Link)`
   border-radius: 5px;
@@ -63,7 +66,6 @@ const StyledLink = styled(Link)`
   font-size: 1.1rem;
   z-index: 999;
   transition: all 0.6s ease;
-
 `;
 
 const StyledHeading = styled(Heading)``;
@@ -77,9 +79,9 @@ const StyledLi = styled.li`
   width: 346px;
   margin: 1rem;
   transition: all 0.5s ease;
-  
-  /* box-shadow: 5px 5px 8px rgba(43, 77, 146, 0.754); */
-  /* position: relative; */
+  animation-name: ${ShowAnimation};
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   &:hover {
     .front {
       transform: perspective(600px) rotateY(180deg);
@@ -115,7 +117,6 @@ const StyledLi = styled.li`
       rgba(242, 242, 242, 0.98) 0%,
       rgba(202, 212, 232, 0.7539390756302521) 100%
     );
-    
   }
 
   .front {

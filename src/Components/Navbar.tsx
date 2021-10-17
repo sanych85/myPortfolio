@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { navigationLinks } from '../data/links';
 import styled, { keyframes } from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import { device } from './devices';
 import { HashLink  } from 'react-router-hash-link';
-
+import LazyLoad from 'react-lazyload';
 interface NavbarProps {
   type?: 'footerNavbar';
 }
@@ -85,6 +84,7 @@ const toggleAnimationTo = keyframes`
 
 const StyledNavbar = styled.nav<ToggleProps>`
   transition: all 0.5s ease;
+  
   @media ${device.tablet} {
     transition: all 1s ease;
     /* animation-name: ${toggleAnimationTo};
@@ -143,7 +143,7 @@ const StyledLink = styled(HashLink)`
   font-family: 'Love Ya Like A Sister', 'sans-serif';
   font-size: 20px;
   color:black;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   /* transition: all 0.8s ease; */
   
   @media ${device.tablet} {
@@ -172,8 +172,8 @@ const StyledLink = styled(HashLink)`
     transition: all 0.4s ease;
   } */
   &:hover {
-    transition: all 1s ease;
-    color: #925858;
+    transition: all 0.4s ease;
+    color: #c75a5a;
   }
   &:hover:before, &:hover:after {
     transition: all 1s ease;

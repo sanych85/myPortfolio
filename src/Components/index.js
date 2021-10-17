@@ -21,6 +21,8 @@ import AdvantageItem from './AdvantageItem';
 import SingleSkill from './SingleSkill';
 
 
+
+
 export {
   Heading,
   Intro,
@@ -42,5 +44,6 @@ export {
   Career,
   WhyYouShouldHire,
   AdvantageItem,
-  SingleSkill
+  SingleSkill,
+ 
 };

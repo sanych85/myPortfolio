@@ -3,7 +3,7 @@ import {  } from './commonComponents';
 import { skills } from '../data/skills';
 import {SingleSkill } from '.';
 import { device } from './devices';
-
+import LazyLoad from 'react-lazyload';
 
 
 const SkillItems = () => {

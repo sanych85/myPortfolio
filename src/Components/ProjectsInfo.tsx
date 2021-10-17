@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Heading } from '.';
 import { MainSectionWrapper } from './commonComponents';
 import { projects } from '../data/projects.js';
-import OneProjectCard from './OneProjectCard';
+
 import OneProject from './OneProject';
 import { device } from './devices';
-import { useParams } from 'react-router';
+
 
 
 
@@ -45,8 +45,4 @@ const InnerWrapper = styled(MainSectionWrapper) `
 flex-wrap: wrap;
 padding: 0px;
 width:100%;
-`
-
-const MainWrapper = styled.div `
-
 `
