@@ -1,6 +1,6 @@
 import React from 'react';
 import { projects } from '../data/projects';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { Heading, ImgItem } from '.';
 
 interface MoreProjectsProps {
@@ -29,12 +29,27 @@ const MoreProjects: React.FC<MoreProjectsProps> = ({ id }) => {
 
 export default MoreProjects;
 
+const AnotherProjectAnimation = keyframes `
+0% {
+  transform: translateX(-50px);
+  opacity:0;
+}
+100% {
+  transform: translateX(0px);
+  opacity:1;
+}
+`
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 80%;
+  animation-name: ${AnotherProjectAnimation};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
 `;
 const ProjectWrapper = styled.div`
   display: flex;
@@ -42,4 +57,5 @@ const ProjectWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
 `;

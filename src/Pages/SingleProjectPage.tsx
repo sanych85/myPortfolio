@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { projects } from '../data/projects';
-import { ProjectCard } from '../Components/OneProjectCard';
+
 import { Button, Heading, MoreProjects, RepoAndSite } from '../Components';
-import { BsCaretLeftFill, BsCaretRightFill } from 'react-icons/bs';
+
 import { device } from '../Components/devices';
 import Slider from '../Components/Slider';
 
@@ -101,6 +101,28 @@ const SingleProjectPage = () => {
 
 export default SingleProjectPage;
 
+const CardAnimation = keyframes `
+0% {
+  opacity:0;
+}
+100% {
+  opacity: 1
+}
+
+`
+
+const ProjectInfoAnimation = keyframes `
+0% {
+  transform: translateY(-50px);
+  opacity:0;
+}
+100% {
+  transform: translateY(0px);
+  opacity:1;
+}
+
+`
+
 const Main = styled.main`
   display: flex;
   align-items: center;
@@ -131,6 +153,9 @@ const ProjectWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 1.5rem;
+  animation-name: ${CardAnimation};
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   @media ${device.tablet} {
     width: 100%;
     flex-direction: column;
@@ -160,6 +185,9 @@ const Info = styled.div`
   flex-direction: column;
   padding-left: 2rem;
   padding-right: 2rem;
+  animation-name: ${ProjectInfoAnimation};
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   @media ${device.tablet} {
     margin-top: 1rem;
   }
