@@ -114,12 +114,13 @@ const CardAnimation = keyframes `
 const ProjectInfoAnimation = keyframes `
 0% {
   transform: translateY(-50px);
-  opacity:0;
+  opacity:1;
 }
 100% {
   transform: translateY(0px);
   opacity:1;
 }
+
 
 `
 
@@ -154,7 +155,7 @@ const ProjectWrapper = styled.div`
   align-items: center;
   margin: 1.5rem;
   animation-name: ${CardAnimation};
-  animation-duration: 2s;
+  animation-duration: 2.6s;
   animation-fill-mode: forwards;
   @media ${device.tablet} {
     width: 100%;

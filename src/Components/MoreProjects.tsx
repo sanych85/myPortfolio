@@ -46,9 +46,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 80%;
-  animation-name: ${AnotherProjectAnimation};
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+
 
 `;
 const ProjectWrapper = styled.div`

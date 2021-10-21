@@ -23,7 +23,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi libero eaque laboriosam officiis doloribus quibusdam harum non a, natus iste voluptas laborum, atque cumque fuga quas iure facilis veritatis sequi!',
+        'the application allows you to get information about countries, as well as play an interesting game of guessing the country depending on its flag ',
       technologies: ['HTML', 'CSS', 'React', 'styled components', 'redux'],
       releasedYear: 2020
     },
@@ -37,7 +37,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus corrupti dicta deleniti, consectetur suscipit ad. Voluptatibus inventore quisquam culpa vero fuga voluptas! Deserunt quas id perferendis neque facere, voluptatibus error.',
+        'The app was created by taking the Node js course on Udemy. Allows you to order a tour and pay for the tour',
       technologies: ['HTML', 'CSS', 'Node js', 'pug'],
       releasedYear: 2021
     },
@@ -51,7 +51,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius esse voluptate excepturi assumenda corporis, error natus sint illo, fuga vitae itaque temporibus eveniet debitis. Explicabo illo minima rerum sunt.',
+        'Application for finding information about github repositories. Allows you to build various statistical graphs',
       technologies: ['HTML', 'CSS', 'React'],
       releasedYear: 2021
     },
@@ -65,7 +65,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur minus doloribus maiores, ullam facere voluptatem quod eaque ad, quos qui sequi tempora corporis suscipit ipsam ducimus, error laudantium officiis quas?',
+        'The application was created during a test interview in the Avito company. Allows you to receive various news, as well as multi-stage comments to them',
       technologies: ['HTML', 'CSS', 'React', 'styled components', 'JEST'],
       releasedYear: 2021
     },
@@ -81,7 +81,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti quos molestias beatae delectus veniam quia cum similique facilis? Quo obcaecati blanditiis saepe veritatis excepturi minima soluta rem? Dolor, facere!',
+        'simple cocktail selection project',
       technologies: ['HTML', 'CSS', 'React', 'JS'],
       releasedYear: 2021
     },
@@ -96,7 +96,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatem doloribus maxime ullam. Fugiat, reiciendis exercitationem illo quod nobis, commodi dolorum ipsam molestiae eaque adipisci corporis est animi? Perspiciatis, expedita?',
+        'Production project, fully working genealogy responsive website. A separate theme was created, which was then stretched over the CPM Wordpress',
       technologies: ['HTML', 'CSS', 'Sass', 'Wordpress', 'Webpack', 'JS'],
       releasedYear: 2021
     },
@@ -111,7 +111,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ad facere aspernatur ipsa ab, est similique id totam quis incidunt voluptatum laudantium soluta iusto molestias eligendi nostrum veritatis. Aperiam, temporibus!',
+        'Production project, fully working consulting responsive website. A separate theme was created, which was then stretched over the CPM Wordpress',
       technologies: ['HTML', 'CSS', 'Sass', 'Wordpress', 'Webpack', 'JS'],
       releasedYear: 2019
     },
@@ -126,7 +126,7 @@ export const projects = [
     detailedInfo: {
       imgs: [ScreenShot1, ScreenShot2, ScreenShot3, ScreenShot4],
       description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, sunt, similique iusto voluptatum dolorem repudiandae sed beatae sit aperiam totam praesentium quaerat. Unde vel temporibus, soluta necessitatibus cum consectetur iste!',
+        'Complete e-commerce project for home interior design!',
       technologies: ['HTML', 'CSS', 'React', 'styled components'],
       releasedYear: 2021
     },

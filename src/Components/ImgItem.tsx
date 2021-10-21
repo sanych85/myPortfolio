@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 interface ImgItemProps {
   src: string;
@@ -7,12 +7,16 @@ interface ImgItemProps {
   id: number;
 }
 
+interface ImgStylesInterface {
+  id: any
+}
+
 const ImgItem: React.FC<ImgItemProps> = ({ src, alt, id }) => {
   console.log("id in img item", id)
   const href = `./${id}`
   return (
     <a href={href}>
-      <Figure>
+      <Figure  id = {id}>
         <Img src={src} alt={alt} />
       </Figure>
     </a>
@@ -20,9 +24,23 @@ const ImgItem: React.FC<ImgItemProps> = ({ src, alt, id }) => {
 };
 
 export default ImgItem;
-const Figure = styled.figure`
+
+const AnotherProjectAnimation = keyframes `
+0% {
+  transform: translateY(-50px);
+  opacity:0;
+}
+100% {
+  transform: translateY(0px);
+  opacity:1;
+}
+`
+const Figure = styled.figure<ImgStylesInterface>`
   margin-left: 5px;
   margin-right: 5px;
+  animation-name: ${AnotherProjectAnimation};
+  animation-duration: ${({id})=>`${id/2+1}s`};
+  animation-fill-mode: forwards;
 `;
 
 const Img = styled.img`
