@@ -39,7 +39,7 @@ const Figure = styled.figure<ImgStylesInterface>`
   margin-left: 5px;
   margin-right: 5px;
   animation-name: ${AnotherProjectAnimation};
-  animation-duration: ${({id})=>`${id/2+1}s`};
+  animation-duration: ${({id})=>`${id/7+1}s`};
   animation-fill-mode: forwards;
 `;
 

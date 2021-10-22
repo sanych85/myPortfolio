@@ -187,7 +187,7 @@ const Info = styled.div`
   padding-left: 2rem;
   padding-right: 2rem;
   animation-name: ${ProjectInfoAnimation};
-  animation-duration: 2s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
   @media ${device.tablet} {
     margin-top: 1rem;

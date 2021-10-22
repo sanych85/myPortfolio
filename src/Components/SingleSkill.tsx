@@ -60,7 +60,7 @@ const StyledLi = styled.li`
   border-radius: 5px;
   margin: 0.5rem;
   animation-name: ${ShowAnimation};
-  animation-duration: 2s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
   p {
     margin: 0rem;

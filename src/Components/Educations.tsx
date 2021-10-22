@@ -57,7 +57,7 @@ const Wrapper = styled.section`
   width: 100%;
   background-color: #f8f8fc;
   animation-name: ${ShowAnimation};
-  animation-duration: 2s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
 `;
 

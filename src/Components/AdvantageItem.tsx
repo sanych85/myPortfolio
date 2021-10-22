@@ -46,7 +46,7 @@ const Li = styled.li`
   position: relative;
   overflow: hidden;
   animation-name: ${ShowAnimation};
-  animation-duration: 2s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
   @media ${device.laptop} {
     margin: 1rem 0.5rem;

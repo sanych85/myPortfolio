@@ -10,13 +10,13 @@ import  {ShowAnimation} from "./commonComponents/Animations"
 export interface ProjectCard {
   name: string;
   id: number;
-  repo: string | undefined;
-  live: string | undefined;
+  repo?: string;
+  live?: string ;
   mainImg: string;
   detailedInfo: {
-    imgs: Array<string>;
+    imgs: string[];
     description: string;
-    technologies: Array<string>;
+    technologies: string[];
     releasedYear: number;
   };
 }
@@ -80,7 +80,7 @@ const StyledLi = styled.li`
   margin: 1rem;
   transition: all 0.5s ease;
   animation-name: ${ShowAnimation};
-  animation-duration: 2s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
   &:hover {
     .front {

@@ -5,11 +5,11 @@ export const ShowAnimation = keyframes `
 
 0% {
   opacity:0;
-  transform: translateY(300px);
+  transform: translateY(50px);
 }
 5% {
   opacity:0;
-  transform: translateY(100px);
+  transform: translateY(40px);
 }
 
 100% {
